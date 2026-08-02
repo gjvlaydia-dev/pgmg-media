@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="images/img001.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/img002.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/img003.png">
+<title>News & Articles | Philippine Global Media Group</title>
+<meta name="description" content="Read the latest news, community coverage, and press releases from the Philippine Global Media Group and its officers.">
+<link rel="canonical" href="https://pgmg.org/news/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="News & Articles | Philippine Global Media Group">
+<meta property="og:description" content="Read the latest news, community coverage, and press releases from the Philippine Global Media Group and its officers.">
+<meta property="og:url" content="https://pgmg.org/news/">
+<meta property="og:image" content="https://pgmg.org/news/images/img004.png">
+<meta property="og:site_name" content="Philippine Global Media Group">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="News & Articles | Philippine Global Media Group">
+<meta name="twitter:description" content="Read the latest news, community coverage, and press releases from the Philippine Global Media Group and its officers.">
+<meta name="twitter:image" content="https://pgmg.org/news/images/img004.png">
+<style>
+:root {
+  --navy:#1B2C6B; --navy-dark:#0F1A45;
+  --red:#CC1B1B; --red-dark:#A01414;
+  --gold:#F5C518; --gold-dark:#D4A800;
+  --white:#FFFFFF; --offwhite:#F5F6FA;
+  --gray:#E8EAF2; --text:#0F1A45; --muted:#5A6080;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Arial Black',Arial,sans-serif;color:var(--text);background:var(--white);}
+p,span,li,a,blockquote,label,input,textarea,select,small{font-family:Arial,Helvetica,sans-serif;}
+
+/* ── TOPBAR ── */
+.topbar{background:var(--navy-dark);color:rgba(255,255,255,.8);font-family:Arial,sans-serif;font-size:12px;padding:7px 0;text-align:center;border-bottom:3px solid var(--gold);}
+.topbar a{color:var(--gold);text-decoration:none;}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:200;background:var(--white);border-bottom:1px solid #dde0ec;box-shadow:0 2px 16px rgba(27,44,107,.1);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:76px;}
+.nav-logo{display:flex;align-items:center;text-decoration:none;}
+.nav-logo img{height:68px;width:auto;max-width:260px;}
+.nav-links{display:flex;align-items:center;gap:1.4rem;list-style:none;}
+.nav-links a{font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--navy);text-decoration:none;transition:color .2s;padding-bottom:3px;border-bottom:2px solid transparwhite-space:nowrap;ent;}
+.nav-links a:hover{color:var(--red);border-bottom-color:var(--red);}
+.nav-links a.active{color:var(--red);border-bottom-color:var(--red);}
+.nav-cta{background:var(--red)!important;color:var(--white)!important;padding:9px 22px!important;border-radius:3px!important;border-bottom:none!important;}
+.nav-cta:hover{background:var(--red-dark)!important;}
+.hamburger{display:none;cursor:pointer;background:none;border:none;padding:4px;}
+.hamburger span{display:block;width:24px;height:2px;background:var(--navy);border-radius:2px;margin:5px 0;}
+
+/* ── HERO SLIDESHOW ── */
+.hero{position:relative;height:88vh;min-height:520px;overflow:hidden;background:var(--navy-dark);display:flex;align-items:center;}
+.hero-flag{position:absolute;top:0;left:0;right:0;height:5px;display:flex;z-index:10;}
+.hero-flag span:nth-child(1){flex:1;background:var(--navy);}
+.hero-flag span:nth-child(2){flex:1;background:var(--red);}
+.hero-flag span:nth-child(3){flex:2;background:var(--gold);}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1s ease;}
+.hero-slide.active{opacity:1;}
+.hero-fade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,18,50,.92) 0%,rgba(10,18,50,.7) 50%,rgba(10,18,50,.3) 100%);z-index:2;}
+.hero-content{position:relative;z-index:5;max-width:1200px;margin:0 auto;padding:0 2rem;width:100%;}
+.hero-slide-label{font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;display:block;}
+.hero-slide-tag{display:inline-block;background:var(--red);color:var(--white);font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;margin-bottom:1rem;}
+.hero-title{font-family:'Arial Black',Arial,sans-serif;font-size:clamp(1.8rem,3.5vw,3rem);text-transform:uppercase;letter-spacing:.02em;line-height:1.1;color:var(--white);margin-bottom:1rem;max-width:640px;}
+.hero-excerpt{font-family:Arial,sans-serif;font-size:1rem;color:rgba(255,255,255,.75);line-height:1.8;max-width:520px;margin-bottom:1.75rem;}
+.hero-cta{display:inline-block;background:var(--red);color:var(--white);font-family:'Arial Black',Arial,sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:13px 28px;border-radius:3px;text-decoration:none;transition:background .2s;}
+.hero-cta:hover{background:var(--red-dark);}
+.hero-cta-outline{display:inline-block;border:1.5px solid rgba(255,255,255,.4);color:var(--white);font-family:'Arial Black',Arial,sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:12px 28px;border-radius:3px;text-decoration:none;transition:all .2s;margin-left:.75rem;}
+.hero-cta-outline:hover{border-color:var(--white);background:rgba(255,255,255,.08);}
+
+/* Hero nav dots + arrows */
+.hero-controls{position:absolute;bottom:2rem;left:0;right:0;z-index:10;max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;gap:1rem;}
+.hero-dots{display:flex;gap:8px;}
+.hero-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.35);cursor:pointer;border:none;transition:all .3s;}
+.hero-dot.active{background:var(--gold);transform:scale(1.3);}
+.hero-arrows{margin-left:auto;display:flex;gap:.5rem;}
+.hero-arrow{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:var(--white);font-family:'Arial Black',Arial,sans-serif;font-size:14px;width:36px;height:36px;border-radius:3px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;}
+.hero-arrow:hover{background:var(--red);border-color:var(--red);}
+
+/* Hero slide counter */
+.hero-counter{font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.1em;color:rgba(255,255,255,.45);margin-left:.75rem;}
+
+/* ── BREAKING / TICKER ── */
+.ticker{background:var(--red);padding:.55rem 0;overflow:hidden;white-space:nowrap;}
+.ticker-inner{display:inline-flex;gap:3rem;animation:ticker 30s linear infinite;}
+.ticker-inner:hover{animation-play-state:paused;}
+.ticker-item{font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--white);display:flex;align-items:center;gap:.6rem;}
+.ticker-item::before{content:'';width:5px;height:5px;background:var(--gold);border-radius:50%;flex-shrink:0;}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ticker-label{background:var(--navy-dark);color:var(--gold);font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:.55rem 1rem;position:absolute;left:0;top:0;z-index:2;}
+
+/* ── LAYOUT ── */
+.container{max-width:1200px;margin:0 auto;padding:0 2rem;}
+section{padding:4rem 0;}
+.section-label{font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem;display:block;}
+.section-title{font-family:'Arial Black',Arial,sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);text-transform:uppercase;letter-spacing:.02em;color:var(--navy);margin-bottom:1.5rem;line-height:1.1;}
+
+/* ── FEATURED ARTICLES (3-col top) ── */
+.featured-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:1.5rem;margin-bottom:3.5rem;}
+.article-card{background:var(--white);border:1px solid var(--gray);border-radius:8px;overflow:hidden;transition:box-shadow .2s,transform .2s;display:flex;flex-direction:column;}
+.article-card:hover{box-shadow:0 8px 30px rgba(27,44,107,.12);transform:translateY(-2px);}
+.article-card-img{width:100%;object-fit:cover;display:block;}
+.featured-main .article-card-img{height:280px;}
+.featured-side .article-card-img{height:160px;}
+.article-card-body{padding:1.25rem;flex:1;display:flex;flex-direction:column;}
+.article-tag{font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--white);padding:3px 10px;border-radius:2px;display:inline-block;margin-bottom:.65rem;width:fit-content;}
+.tag-press{background:var(--navy);}
+.tag-awards{background:var(--gold-dark);color:var(--navy-dark);}
+.tag-community{background:var(--red);}
+.tag-events{background:#2E86AB;}
+.tag-culture{background:#6B4226;}
+.article-card-body h3{font-family:'Arial Black',Arial,sans-serif;font-size:.95rem;color:var(--navy);text-transform:uppercase;letter-spacing:.02em;line-height:1.3;margin-bottom:.5rem;flex:1;}
+.article-card-body p{font-family:Arial,sans-serif;font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:.75rem;}
+.article-meta{font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:auto;}
+.read-more{font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--red);text-decoration:none;display:inline-flex;align-items:center;gap:4px;margin-top:.6rem;}
+.read-more:hover{color:var(--navy);}
+
+/* ── MAIN + SIDEBAR LAYOUT ── */
+.news-layout{display:grid;grid-template-columns:1fr 320px;gap:2.5rem;align-items:start;}
+
+/* ── DATABASE / ARTICLE LIST ── */
+.db-controls{display:flex;gap:.75rem;flex-wrap:wrap;align-items:center;margin-bottom:2rem;padding-bottom:1rem;border-bottom:2px solid var(--gray);}
+.db-filter-btn{font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:7px 16px;border-radius:3px;border:1.5px solid var(--gray);background:var(--white);color:var(--muted);cursor:pointer;transition:all .2s;}
+.db-filter-btn:hover{border-color:var(--navy);color:var(--navy);}
+.db-filter-btn.active{background:var(--navy);color:var(--white);border-color:var(--navy);}
+.db-search{flex:1;min-width:180px;font-family:Arial,sans-serif;font-size:13px;padding:8px 14px;border:1.5px solid var(--gray);border-radius:3px;outline:none;margin-left:auto;}
+.db-search:focus{border-color:var(--navy);}
+
+.article-row{display:grid;grid-template-columns:120px 1fr;gap:1.25rem;padding:1.25rem 0;border-bottom:1px solid var(--gray);align-items:start;transition:background .15s;cursor:pointer;}
+.article-row:hover{background:var(--offwhite);margin:0 -1rem;padding-left:1rem;padding-right:1rem;border-radius:4px;}
+.article-row-img{width:120px;height:80px;object-fit:cover;border-radius:4px;display:block;flex-shrink:0;}
+.article-row-tag{font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--white);padding:2px 8px;border-radius:2px;display:inline-block;margin-bottom:5px;}
+.article-row h4{font-family:'Arial Black',Arial,sans-serif;font-size:13px;color:var(--navy);text-transform:uppercase;letter-spacing:.02em;line-height:1.35;margin-bottom:4px;}
+.article-row p{font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;}
+.article-row-meta{font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px;}
+
+/* ── SIDEBAR ── */
+.sidebar-widget{background:var(--offwhite);border:1px solid var(--gray);border-radius:8px;padding:1.5rem;margin-bottom:1.5rem;border-top:3px solid var(--gold);}
+.sidebar-widget h4{font-family:'Arial Black',Arial,sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-bottom:1.25rem;padding-bottom:.5rem;border-bottom:1px solid var(--gray);}
+.sidebar-article{display:flex;gap:.85rem;padding:.75rem 0;border-bottom:1px solid var(--gray);}
+.sidebar-article:last-child{border-bottom:none;}
+.sidebar-article img{width:64px;height:48px;object-fit:cover;border-radius:3px;flex-shrink:0;}
+.sidebar-article h5{font-family:'Arial Black',Arial,sans-serif;font-size:11px;color:var(--navy);text-transform:uppercase;letter-spacing:.02em;line-height:1.3;margin-bottom:3px;}
+.sidebar-article span{font-family:Arial,sans-serif;font-size:11px;color:var(--muted);}
+.tag-list{display:flex;flex-wrap:wrap;gap:.5rem;}
+.tag-pill{font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:100px;background:var(--white);border:1.5px solid var(--gray);color:var(--muted);cursor:pointer;transition:all .2s;}
+.tag-pill:hover,.tag-pill.active{background:var(--navy);color:var(--white);border-color:var(--navy);}
+.fb-widget{background:var(--navy-dark);border-radius:8px;padding:1.5rem;text-align:center;border-top:3px solid var(--gold);}
+.fb-widget h4{font-family:'Arial Black',Arial,sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--white);margin-bottom:.75rem;}
+.fb-widget p{font-family:Arial,sans-serif;font-size:13px;color:rgba(255,255,255,.6);line-height:1.6;margin-bottom:1rem;}
+.btn-fb{display:block;background:#1877F2;color:var(--white);font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:11px;border-radius:3px;text-decoration:none;transition:background .2s;}
+.btn-fb:hover{background:#145db8;}
+
+/* ── CONTACT FORM ── */
+.contact-section{background:var(--offwhite);padding:5rem 0;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:3rem;}
+.contact-info{display:flex;flex-direction:column;gap:1.5rem;}
+.contact-item{display:flex;gap:1rem;align-items:flex-start;}
+.contact-icon{width:44px;height:44px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.contact-icon.red{background:var(--red);} .contact-icon.navy{background:var(--navy);} .contact-icon.dark{background:var(--navy-dark);}
+.contact-icon svg{width:20px;height:20px;fill:var(--white);}
+.contact-item h4{font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
+.contact-item a,.contact-item p{font-size:15px;color:var(--navy);font-weight:600;text-decoration:none;}
+.contact-item a:hover{color:var(--red);}
+.contact-form{background:var(--white);border:1px solid var(--gray);border-radius:8px;padding:2.5rem;border-top:4px solid var(--navy);}
+.contact-form h3{font-family:'Arial Black',Arial,sans-serif;font-size:1.2rem;color:var(--navy);margin-bottom:1.5rem;text-transform:uppercase;letter-spacing:.04em;}
+.form-group{margin-bottom:1.2rem;}
+.form-group label{display:block;font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:10px 14px;border:1.5px solid var(--gray);border-radius:4px;font-family:Arial,sans-serif;font-size:14px;color:var(--text);background:var(--white);outline:none;transition:border-color .2s;}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--navy);}
+.form-group textarea{resize:vertical;min-height:100px;}
+.btn-submit{width:100%;background:var(--red);color:var(--white);font-family:'Arial Black',Arial,sans-serif;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:13px;border:none;border-radius:4px;cursor:pointer;transition:background .2s;margin-top:.5rem;}
+.btn-submit:hover{background:var(--red-dark);}
+
+/* ── FOOTER ── */
+footer{background:var(--white);color:var(--muted);border-top:1px solid var(--gray);padding:4rem 0 0;}
+.footer-flag{height:4px;background:linear-gradient(90deg,var(--navy-dark) 33%,var(--red) 33% 66%,var(--gold) 66%);}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;max-width:1200px;margin:0 auto;padding:3rem 2rem;border-bottom:1px solid var(--gray);}
+.footer-logo img{height:72px;width:auto;max-width:260px;margin-bottom:1rem;}
+.footer-desc{font-family:Arial,sans-serif;font-size:14px;line-height:1.75;color:var(--muted);margin-bottom:1.25rem;}
+.footer-social{display:flex;gap:10px;}
+.social-btn{width:36px;height:36px;background:var(--offwhite);border:1px solid var(--gray);border-radius:4px;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:background .2s;}
+.social-btn:hover{background:var(--navy);}
+.social-btn:hover svg{fill:var(--white);}
+.social-btn svg{width:16px;height:16px;fill:var(--navy);transition:fill .2s;}
+.nonprofit-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(27,44,107,.07);border:1px solid rgba(27,44,107,.15);color:var(--navy);font-family:'Arial Black',Arial,sans-serif;font-size:10px;padding:4px 12px;border-radius:100px;letter-spacing:.1em;margin-top:1rem;}
+.footer-col h4{font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin-bottom:1rem;}
+.footer-col ul{list-style:none;}
+.footer-col ul li{margin-bottom:8px;}
+.footer-col ul a{font-size:14px;color:var(--muted);text-decoration:none;transition:color .2s;}
+.footer-col ul a:hover{color:var(--red);}
+.footer-bottom{max-width:1200px;margin:0 auto;padding:1.25rem 2rem;display:flex;justify-content:space-between;align-items:center;font-family:Arial,sans-serif;font-size:12px;flex-wrap:wrap;gap:1rem;}
+.footer-bottom a{color:var(--muted);text-decoration:none;}
+.footer-bottom a:hover{color:var(--red);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1000px){
+  .news-layout{grid-template-columns:1fr;}
+  .featured-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:1100px){
+  .nav-links{display:none;}
+  .hamburger{display:block;}
+  .featured-grid{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .hero{height:auto;min-height:480px;padding:5rem 0 6rem;}
+  .db-controls{gap:.5rem;}
+  .db-search{min-width:100%;order:10;}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  Philippine Global Media Group &nbsp;|&nbsp; 501(c)(3) Nonprofit &nbsp;|&nbsp;
+  <a href="mailto:info@pgmg.org">info@pgmg.org</a> &nbsp;|&nbsp;
+  <a href="https://pgmg.org">pgmg.org</a> &nbsp;|&nbsp;
+  <a href="https://www.facebook.com/profile.php?id=61560143865748" target="_blank">Follow us on Facebook</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://pgmg.org" class="nav-logo">
+      <img src="images/img004.png" alt="Philippine Global Media Group">
+    </a>
+    <ul class="nav-links">
+      <li><a href="https://pgmg.org#about">About</a></li>
+      <li><a href="/history/">History</a></li>
+      <li><a href="https://pgmg.org#officers">Officers</a></li>
+      <li><a href="https://pgmg.org#events">Events</a></li>
+      <li><a href="/news/" class="active">News</a></li>
+      <li><a href="https://pgmg.org/gallery/">Gallery</a></li>
+      <li><a href="https://pgmg.org/scholarship/">Scholarship</a></li>
+      <li><a href="https://pgmg.org#contact">Contact</a></li>
+      <li><a href="https://pgmg.org#contact" class="nav-cta">Get Involved</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO SLIDESHOW -->
+<section class="hero" id="hero">
+  <div class="hero-flag"><span></span><span></span><span></span></div>
+
+  <div class="hero-slide active" style="background-image:url('images/img005.png');background-position:center top;"></div>
+  <div class="hero-slide" style="background-image:url('images/img006.jpg');background-position:center top;"></div>
+  <div class="hero-slide" style="background-image:url('images/img007.jpg');background-position:center top;"></div>
+  <div class="hero-slide" style="background-image:url('images/img008.jpg');background-position:center;"></div>
+  <div class="hero-slide" style="background-image:url('images/img009.jpg');background-position:center top;"></div>
+
+  <div class="hero-slide" style="background-image:url('images/img010.jpg');background-position:center top;"></div>
+  <div class="hero-fade"></div>
+
+  <div class="hero-content">
+    <!-- Slide captions shown via JS -->
+    <span class="hero-slide-label" id="heroLabel">Philippine Global Media Group</span>
+    <span class="hero-slide-tag" id="heroTag">Press Release</span>
+    <h1 class="hero-title" id="heroTitle">PGMG to Hold Induction of Officers &amp; Gala Night</h1>
+    <p class="hero-excerpt" id="heroExcerpt">August 8, 2026 at 6:00 PM &mdash; Crystal Ballroom, Sheraton Cerritos Hotel. An evening of leadership, service and commitment to our community. Proceeds benefit the Manny Ilagan Memorial Scholarship Program.</p>
+    <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
+      <a class="hero-cta" id="heroCta" href="mailto:info@pgmg.org">Reserve Your Seat</a>
+      <a class="hero-cta-outline" href="#articles">All Articles</a>
+    </div>
+  </div>
+
+  <div class="hero-controls">
+    <div class="hero-dots">
+      <button class="hero-dot active" onclick="goSlide(0)"></button>
+      <button class="hero-dot" onclick="goSlide(1)"></button>
+      <button class="hero-dot" onclick="goSlide(2)"></button>
+      <button class="hero-dot" onclick="goSlide(3)"></button>
+      <button class="hero-dot" onclick="goSlide(4)"></button>
+      <button class="hero-dot" onclick="goSlide(5)"></button>
+    </div>
+    <span class="hero-counter" id="heroCounter">1 / 5</span>
+    <div class="hero-arrows">
+      <button class="hero-arrow" onclick="prevSlide()">&#8592;</button>
+      <button class="hero-arrow" onclick="nextSlide()">&#8594;</button>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div style="position:relative;">
+  <div style="position:absolute;left:0;top:0;bottom:0;background:var(--navy-dark);padding:0 1rem;display:flex;align-items:center;z-index:2;">
+    <span style="font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;">Latest News</span>
+  </div>
+  <div class="ticker" style="padding-left:140px;">
+    <div class="ticker-inner">
+      <span class="ticker-item">PGMG Officers meet Presidential Assistant Ana Carmela Remigio at Philippine Consulate General Reception — June 15, 2026</span>
+      <span class="ticker-item">PGMG Induction of Officers &amp; Gala Night — August 8, 2026</span>
+      <span class="ticker-item">Dan Nino &amp; Ellen Rodriguez-Swing honored at 2026 TOP Awards</span>
+      <span class="ticker-item">PGMG at Carson Philippine Independence Day Celebration</span>
+      <span class="ticker-item">PGMG at Philippine Consulate Philippine Independence Day</span>
+      <span class="ticker-item">Tickets available — $110 per person — info@pgmg.org</span>
+      <span class="ticker-item">PGMG: A Night of Fun, Food and Camaraderie — Philippine Post Jan 9, 2026</span>
+      <!-- Duplicate for seamless loop -->
+      <span class="ticker-item">PGMG Induction of Officers &amp; Gala Night — August 8, 2026</span>
+      <span class="ticker-item">Dan Nino &amp; Ellen Rodriguez-Swing honored at 2026 TOP Awards</span>
+      <span class="ticker-item">PGMG at Carson Philippine Independence Day Celebration</span>
+      <span class="ticker-item">PGMG at Philippine Consulate Philippine Independence Day</span>
+      <span class="ticker-item">Tickets available — $110 per person — info@pgmg.org</span>
+      <span class="ticker-item">PGMG: A Night of Fun, Food and Camaraderie — Philippine Post Jan 9, 2026</span>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURED ARTICLES -->
+<section style="background:var(--white);padding:4rem 0;">
+  <div class="container">
+    <span class="section-label">Featured Stories</span>
+    <h2 class="section-title">Top Articles</h2>
+
+    <div class="featured-grid">
+      <!-- MAIN FEATURED -->
+      <div class="featured-main">
+        <div class="article-card" style="border-top:4px solid var(--red);">
+          <img src="images/img011.jpg" alt="Induction Gala Night" class="article-card-img" style="height:280px;object-fit:cover;object-position:top;">
+          <div class="article-card-body">
+            <span class="article-tag tag-press">Press Release</span>
+            <h3>PGMG to Hold Induction of Officers &amp; Gala Night — August 8, 2026</h3>
+            <p>On its third year as an active press organization, PGMG will hold its Induction of Officers and Gala Night at the Crystal Ballroom of the Sheraton Cerritos Hotel. Proceeds benefit the Manny Ilagan Memorial Scholarship Program.</p>
+            <div class="article-meta">August 2026 &nbsp;&middot;&nbsp; Press Release</div>
+            <a href="#press-release" class="read-more">Read Full Article &#8594;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDE FEATURED -->
+      <div class="featured-side" style="display:flex;flex-direction:column;gap:1.5rem;">
+        <div class="article-card" style="border-top:4px solid var(--gold-dark);">
+          <img src="images/img006.jpg" alt="Dan Nino TOP Award" class="article-card-img" style="height:160px;object-fit:cover;object-position:top;">
+          <div class="article-card-body">
+            <span class="article-tag tag-awards">TOP Awards</span>
+            <h3>Dan Nino &amp; Ellen Rodriguez-Swing Honored at 2026 TOP Awards</h3>
+            <div class="article-meta">2026 &nbsp;&middot;&nbsp; Community Recognition</div>
+            <a href="#top-awards" class="read-more">Read More &#8594;</a>
+          </div>
+        </div>
+        <div class="article-card" style="border-top:4px solid var(--red);">
+          <img src="images/img012.png" alt="Philippine Post" class="article-card-img" style="height:160px;object-fit:cover;">
+          <div class="article-card-body">
+            <span class="article-tag tag-community">Philippine Post</span>
+            <h3>PGMG: A Night of Fun, Food and Camaraderie</h3>
+            <div class="article-meta">January 9, 2026 &nbsp;&middot;&nbsp; Philippine Post — Page 13</div>
+            <a href="#newspaper" class="read-more">Read More &#8594;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE DATABASE -->
+<section style="background:var(--offwhite);padding:4rem 0;" id="articles">
+  <div class="container">
+    <span class="section-label">Article Database</span>
+    <h2 class="section-title">All News &amp; Announcements</h2>
+
+    <div class="news-layout">
+      <!-- LEFT: list -->
+      <div>
+        <div class="db-controls">
+          <button class="db-filter-btn active" onclick="filterArticles('all',this)">All</button>
+          <button class="db-filter-btn" onclick="filterArticles('press',this)">Press Release</button>
+          <button class="db-filter-btn" onclick="filterArticles('awards',this)">Awards</button>
+          <button class="db-filter-btn" onclick="filterArticles('events',this)">Events</button>
+          <button class="db-filter-btn" onclick="filterArticles('community',this)">Community</button>
+          <input class="db-search" type="text" placeholder="Search articles..." oninput="searchArticles(this.value)">
+        </div>
+
+        <div id="articleList">
+
+          <div class="article-row" data-cat="press" data-keywords="induction gala officers august 2026 sheraton cerritos scholarship">
+            <img src="images/img011.jpg" alt="" class="article-row-img">
+            <div>
+              <span class="article-row-tag tag-press">Press Release</span>
+              <h4>PGMG to Hold Induction of Officers &amp; Gala Night — August 8, 2026</h4>
+              <p>An evening of leadership, service and commitment to our community at the Crystal Ballroom, Sheraton Cerritos Hotel. Proceeds to benefit the Manny Ilagan Memorial Scholarship Program.</p>
+              <div class="article-row-meta">August 2026 &nbsp;&middot;&nbsp; PGMG Press Release</div>
+            </div>
+          </div>
+
+          <div class="article-row" data-cat="awards" data-keywords="dan nino ellen rodriguez swing top awards outstanding pilipinos 2026 journalism">
+            <img src="images/img006.jpg" alt="" class="article-row-img" style="object-position:top;">
+            <div>
+              <span class="article-row-tag tag-awards">TOP Awards</span>
+              <h4>Dan Nino &amp; Ellen Rodriguez-Swing Honored at 2026 TOP Awards</h4>
+              <p>PGMG President Dan Nino and Public Relations Officer Ellen Rodriguez-Swing received the prestigious 2026 TOP (The Outstanding Pilipinos) Award, each with a California Legislature Assembly Certificate of Recognition.</p>
+              <div class="article-row-meta">2026 &nbsp;&middot;&nbsp; Community Recognition &nbsp;&middot;&nbsp; Joe Cobilla Jr.</div>
+            </div>
+          </div>
+
+          <div class="article-row" data-cat="community" data-keywords="holiday party fun food camaraderie christmas karaoke philippine post january 2026">
+            <img src="images/img012.png" alt="" class="article-row-img">
+            <div>
+              <span class="article-row-tag tag-community">Philippine Post</span>
+              <h4>PGMG: A Night of Fun, Food and Camaraderie</h4>
+              <p>The Philippine Post featured PGMG's holiday celebration — a five-hour evening of community spirit, Filipino food, raffles, and karaoke at Pia Legaspi's offices.</p>
+              <div class="article-row-meta">January 9, 2026 &nbsp;&middot;&nbsp; Philippine Post, Page 13</div>
+            </div>
+          </div>
+
+          <div class="article-row" data-cat="events" data-keywords="carson independence day philippine celebration banner stage 2026">
+            <img src="images/img008.jpg" alt="" class="article-row-img">
+            <div>
+              <span class="article-row-tag tag-events">Events</span>
+              <h4>PGMG at the City of Carson Philippine Independence Day Celebration</h4>
+              <p>PGMG members took to the stage at the City of Carson Philippine Independence Day Celebration, proudly representing the Filipino media community.</p>
+              <div class="article-row-meta">2026 &nbsp;&middot;&nbsp; City of Carson</div>
+            </div>
+          </div>
+
+          <div class="article-row" data-cat="events" data-keywords="philippine consulate independence day celebration formal barong terno">
+            <img src="images/img009.jpg" alt="" class="article-row-img" style="object-position:top;">
+            <div>
+              <span class="article-row-tag tag-events">Events</span>
+              <h4>PGMG at the Philippine Consulate Independence Day Celebration</h4>
+              <p>PGMG members attended the Philippine Consulate's Philippine Independence Day celebration, representing the organization in traditional Filipino attire.</p>
+              <div class="article-row-meta">2026 &nbsp;&middot;&nbsp; Philippine Consulate, Los Angeles</div>
+            </div>
+          </div>
+
+          <div class="article-row" data-cat="community" data-keywords="cerritos top awards city recognition community leaders pgmg">
+            <img src="images/img013.png" alt="" class="article-row-img">
+            <div>
+              <span class="article-row-tag tag-community">Community</span>
+              <h4>PGMG Members Represent at City of Cerritos Official Event</h4>
+              <p>PGMG officers and members gathered at an official City of Cerritos event, strengthening ties with civic leaders and the broader Filipino-American community.</p>
+              <div class="article-row-meta">2026 &nbsp;&middot;&nbsp; City of Cerritos</div>
+            </div>
+          </div>
+
+          <div class="article-row" data-cat="events" data-keywords="consulate general reception ana carmela remigio presidential assistant northern luzon los angeles public library june 2026 independence day">
+            <img src="images/img010.jpg" alt="" class="article-row-img">
+            <div>
+              <span class="article-row-tag tag-events">Events</span>
+              <h4>PGMG Officers with Presidential Assistant Ana Carmela Remigio at Philippine Consulate General Reception</h4>
+              <p>PGMG officers joined the reception hosted by the Philippine Consulate General in Los Angeles at the Los Angeles Public Library, where they met with Presidential Assistant for Northern Luzon Ana Carmela Remigio.</p>
+              <div class="article-row-meta">June 15, 2026 &nbsp;&middot;&nbsp; Philippine Consulate General, Los Angeles</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="noResults" style="display:none;padding:2rem;text-align:center;color:var(--muted);font-family:Arial,sans-serif;font-size:14px;">No articles found matching your search.</div>
+      </div>
+
+      <!-- RIGHT: sidebar -->
+      <div>
+        <div class="sidebar-widget">
+          <h4>Most Recent</h4>
+          <div class="sidebar-article">
+            <img src="images/img011.jpg" alt="">
+            <div>
+              <h5>Induction of Officers &amp; Gala Night</h5>
+              <span>August 8, 2026</span>
+            </div>
+          </div>
+          <div class="sidebar-article">
+            <img src="images/img006.jpg" alt="" style="object-position:top;">
+            <div>
+              <h5>2026 TOP Awards — Dan Nino &amp; Ellen Rodriguez-Swing</h5>
+              <span>2026</span>
+            </div>
+          </div>
+          <div class="sidebar-article">
+            <img src="images/img012.png" alt="">
+            <div>
+              <h5>PGMG: A Night of Fun, Food and Camaraderie</h5>
+              <span>January 9, 2026</span>
+            </div>
+          </div>
+          <div class="sidebar-article">
+            <img src="images/img008.jpg" alt="">
+            <div>
+              <h5>Carson Philippine Independence Day</h5>
+              <span>2026</span>
+            </div>
+          <div class="sidebar-article">
+            <img src="images/img010.jpg" alt="" style="object-position:top;">
+            <div>
+              <h5>PGMG Officers with Presidential Assistant Remigio</h5>
+              <span>June 15, 2026</span>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="sidebar-widget">
+          <h4>Browse by Category</h4>
+          <div class="tag-list">
+            <button class="tag-pill active" onclick="filterArticles('all',this);syncFilter(this)">All</button>
+            <button class="tag-pill" onclick="filterArticles('press',this);syncFilter(this)">Press Release</button>
+            <button class="tag-pill" onclick="filterArticles('awards',this);syncFilter(this)">Awards</button>
+            <button class="tag-pill" onclick="filterArticles('events',this);syncFilter(this)">Events</button>
+            <button class="tag-pill" onclick="filterArticles('community',this);syncFilter(this)">Community</button>
+          </div>
+        </div>
+
+        <div class="fb-widget">
+          <h4>Follow PGMG</h4>
+          <p>Get the latest news, events, and community stories on our Facebook page.</p>
+          <a href="https://www.facebook.com/profile.php?id=61560143865748" target="_blank" class="btn-fb">Follow on Facebook</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FULL PRESS RELEASE -->
+<section style="background:var(--white);padding:5rem 0;" id="press-release">
+  <div class="container">
+    <span class="section-label">Full Press Release</span>
+    <h2 class="section-title">PGMG to Hold Induction/Gala Night Aug. 8</h2>
+    <div style="display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;">
+      <div style="font-family:Arial,sans-serif;font-size:15px;color:var(--text);line-height:1.9;">
+        <p style="margin-bottom:1rem;">On its third year as an active press organization, the Philippine Global Media Group (PGMG) will hold its Induction of Officers and Gala Night on <strong>August 8 (Saturday) at 6:00 PM</strong> at the <strong>Crystal Ballroom</strong> of the <strong>Sheraton Cerritos Hotel</strong> at 12725 Center Court Drive, Cerritos.</p>
+        <p style="margin-bottom:1rem;">This was announced by incoming president <strong>Dan Estabillo Nino</strong> and <strong>Val G. Abelgas</strong>, president and board chairman respectively of PGMG, a City of Cerritos-based <strong>public benefit 501 C-3 nonprofit corporation</strong>.</p>
+        <p style="margin-bottom:1rem;">Mr. Nino, a lifelong journalist, will succeed Mr. Abelgas, also a seasoned journalist, who will serve as chairman of the board. Nino began his media career in Manila in 1973. He freelances for Philippine News Today, Asian Journal, Balikbayan Magazine, Weekend Balita, and the Philippine Post, and was recently conferred the <strong>2026 TOP (The Outstanding Pilipino) Award</strong> for Journalism.</p>
+        <p style="margin-bottom:1rem;"><strong>Val Abelgas</strong>, founding president of PGMG, is publisher and editor-in-chief of Philippine Post. A professional journalist for 54 years, he was the <strong>first TOP Awardee for Outstanding Achievement in Journalism in 2018</strong> and the <strong>first FAPCCA Journalist of the Year in 2016</strong>.</p>
+        <p style="margin-bottom:1rem;">Other officers to be sworn in by <strong>Philippine Consul General to Los Angeles Adelio Angelito S. Cruz</strong> include vice presidents <strong>Lydia V. Solis</strong>, <strong>Nimfa U. Rueda</strong>, <strong>Jannelle So</strong>; <strong>Donna Gatdula-Arevalo</strong> (secretary); <strong>Meg Ilagan</strong> (treasurer); <strong>Rick Gavino</strong> (Auditor); <strong>Ellen Rodriguez-Swing</strong> and <strong>Joe T. Cobilla, Jr.</strong> (PROs); and 14 board members.</p>
+        <p style="margin-bottom:1rem;">PGMG was founded in <strong>November 2023</strong> by <strong>Manny Ilagan</strong>, <strong>Val Abelgas</strong>, <strong>Lydia Solis</strong>, and <strong>Nimfa Rueda</strong> to unite media practitioners and uplift journalistic standards in Southern California, with a vision to expand to the global Filipino diaspora.</p>
+        <p style="margin-bottom:1.75rem;">Among its accomplishments: book launch of <em>"California: A Philippine Territory Almost"</em> by <strong>Albert G. Gabot</strong>; supporting the renaming of Echo Park Library to <strong>Carlos Bulusan Library</strong>; covering community events across Southern California; and awarding a scholarship to a college-bound Filipino-American student.</p>
+        <blockquote style="border-left:4px solid var(--gold);padding:1rem 1.5rem;background:var(--offwhite);border-radius:0 6px 6px 0;margin:1.5rem 0;font-style:italic;color:var(--navy);font-size:15px;line-height:1.8;">"We invite our various publics to share our mission of serving our community the way we know best — helping inform our readers and viewers of latest developments in the community and in the homeland."<br><strong style="font-style:normal;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-top:.6rem;">Dan E. Nino &amp; Val G. Abelgas</strong></blockquote>
+        <div style="background:var(--offwhite);border:1px solid var(--gray);border-radius:6px;padding:1.25rem 1.5rem;border-left:4px solid var(--red);">
+          <div style="font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">For Sponsorship &amp; Gala Night Attendance</div>
+          <p style="font-size:14px;color:var(--navy);line-height:1.8;">(562) 508-8099 &nbsp;|&nbsp; (562) 469-8030 &nbsp;|&nbsp; <a href="mailto:info@pgmg.org" style="color:var(--red);font-weight:700;">info@pgmg.org</a></p>
+        </div>
+      </div>
+      <div style="position:sticky;top:100px;">
+        <img src="images/img011.jpg" alt="Induction of Officers Flyer" style="width:100%;border-radius:8px;box-shadow:0 8px 30px rgba(27,44,107,.2);display:block;margin-bottom:1rem;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.75rem;">
+          <div style="text-align:center;border:1px solid var(--gray);border-radius:6px;padding:1rem;background:var(--white);">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">Date</div>
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:1.1rem;color:var(--navy);">Aug 8</div>
+            <div style="font-size:12px;color:var(--muted);">2026 | 6 PM</div>
+          </div>
+          <div style="text-align:center;border:1px solid var(--gray);border-radius:6px;padding:1rem;background:var(--white);">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">Ticket</div>
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:1.1rem;color:var(--red);">$110</div>
+            <div style="font-size:12px;color:var(--muted);">Per person</div>
+          </div>
+        </div>
+        <a href="mailto:info@pgmg.org" style="display:block;text-align:center;font-family:'Arial Black',Arial,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:var(--red);color:var(--white);padding:13px;border-radius:3px;text-decoration:none;">Reserve Your Seat</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOP AWARDS -->
+<section style="background:var(--navy-dark);padding:5rem 0;" id="top-awards">
+  <div class="container">
+    <span class="section-label" style="color:var(--gold);">Community Recognition</span>
+    <h2 class="section-title" style="color:var(--white);">PGMG Members Honored at 2026 TOP Awards</h2>
+    <p style="font-family:Arial,sans-serif;font-size:1rem;color:rgba(255,255,255,.7);line-height:1.8;max-width:640px;margin-bottom:2.5rem;">PGMG's <strong style="color:var(--gold);">Dan Nino</strong> and <strong style="color:var(--gold);">Ellen Rodriguez-Swing</strong> received the prestigious <strong style="color:var(--white);">2026 TOP (The Outstanding Pilipinos) Awards</strong> with California Legislature Assembly Certificates of Recognition.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-top:4px solid var(--gold);border-radius:10px;overflow:hidden;">
+        <div style="height:380px;overflow:hidden;"><img src="images/img006.jpg" alt="Dan Nino" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+        <div style="padding:1.75rem;">
+          <div style="font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">PGMG President</div>
+          <div style="font-family:'Arial Black',Arial,sans-serif;font-size:1.3rem;color:var(--white);text-transform:uppercase;margin-bottom:6px;">Dan Nino</div>
+          <span style="display:inline-block;background:var(--red);color:var(--white);font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;margin-bottom:1rem;">2026 TOP Award Recipient</span>
+          <p style="font-family:Arial,sans-serif;font-size:14px;color:rgba(255,255,255,.65);line-height:1.75;">Honored for his outstanding achievement in the field of Journalism and his dedication to excellence, integrity, and impactful storytelling in service of the Filipino-American community.</p>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-top:4px solid var(--gold);border-radius:10px;overflow:hidden;">
+        <div style="height:380px;overflow:hidden;"><img src="images/img007.jpg" alt="Ellen Rodriguez-Swing" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+        <div style="padding:1.75rem;">
+          <div style="font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">PGMG Public Relations Officer</div>
+          <div style="font-family:'Arial Black',Arial,sans-serif;font-size:1.3rem;color:var(--white);text-transform:uppercase;margin-bottom:6px;">Ellen Rodriguez-Swing</div>
+          <span style="display:inline-block;background:var(--red);color:var(--white);font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;margin-bottom:1rem;">2026 TOP Award Recipient</span>
+          <p style="font-family:Arial,sans-serif;font-size:14px;color:rgba(255,255,255,.65);line-height:1.75;">Honored for her outstanding community service, exemplary leadership, and steadfast commitment to advancing and empowering the Filipino-American community.</p>
+        </div>
+      </div>
+    </div>
+    <p style="font-family:Arial,sans-serif;font-size:13px;color:rgba(255,255,255,.35);font-style:italic;margin-top:1.5rem;text-align:right;">&mdash; Joe Cobilla Jr., PGMG Member</p>
+  </div>
+</section>
+
+<!-- NEWSPAPER CLIP -->
+<section style="background:var(--white);padding:5rem 0;" id="newspaper">
+  <div class="container">
+    <span class="section-label">In the Press</span>
+    <h2 class="section-title">PGMG in the Philippine Post</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:2rem;">
+      <div style="border-radius:8px;overflow:hidden;box-shadow:0 8px 30px rgba(27,44,107,.15);"><img src="images/img012.png" alt="Philippine Post — PGMG" style="width:100%;display:block;"></div>
+      <div>
+        <span style="background:var(--red);color:var(--white);font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:4px 12px;border-radius:2px;display:inline-block;margin-bottom:1rem;">Philippine Post</span>
+        <p style="font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:.75rem;">January 9, 2026 &nbsp;&middot;&nbsp; Page 13</p>
+        <h3 style="font-family:'Arial Black',Arial,sans-serif;font-size:1.4rem;text-transform:uppercase;letter-spacing:.02em;color:var(--navy);line-height:1.25;margin-bottom:1rem;">PGMG: A Night of Fun, Food and Camaraderie</h3>
+        <p style="font-family:Arial,sans-serif;font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:1rem;">The Philippine Post featured PGMG's holiday celebration — a five-hour evening of community spirit, Filipino food, raffles, and karaoke. Members and guests gathered for an evening of kwentuhan, kainan, kantahan at katuwaan.</p>
+        <p style="font-family:Arial,sans-serif;font-size:14px;color:var(--muted);line-height:1.8;">The group also shared plans for an upcoming scholarship fund-raiser for <strong>Filipino journalism and mass communication students</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <span class="section-label">Reach Us</span>
+    <h2 class="section-title">Submit a Story or Get in Touch</h2>
+    <p style="font-family:Arial,sans-serif;font-size:1rem;color:var(--muted);line-height:1.8;max-width:600px;">Have a news tip, story idea, press release, or want to partner with PGMG? Fill out the form below and our team will get back to you.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon red"><svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+          <div><h4>Email</h4><a href="mailto:info@pgmg.org">info@pgmg.org</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon navy"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg></div>
+          <div><h4>Website</h4><a href="https://pgmg.org" target="_blank">pgmg.org</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon dark"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div>
+          <div><h4>Facebook</h4><a href="https://www.facebook.com/profile.php?id=61560143865748" target="_blank">Philippine Global Media Group</a></div>
+        </div>
+        <div style="padding:1.5rem;background:var(--white);border:1px solid var(--gray);border-radius:6px;border-left:4px solid var(--gold);">
+          <div style="font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Nonprofit Status</div>
+          <p style="font-size:14px;color:var(--navy);line-height:1.6;">Philippine Global Media Group is a registered 501(c)(3) nonprofit organization. Donations are tax-deductible to the fullest extent permitted by law.</p>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Send Us a Message</h3>
+        <div class="form-group"><label>Full Name</label><input type="text" id="n-name" placeholder="Your full name"></div>
+        <div class="form-group"><label>Email Address</label><input type="email" id="n-email" placeholder="your@email.com"></div>
+        <div class="form-group"><label>Subject</label>
+          <select id="n-subject">
+            <option value="">Select a topic...</option>
+            <option>Submit a Story / News Tip</option>
+            <option>Press Release Submission</option>
+            <option>Event Coverage Request</option>
+            <option>Gala Night / Ticket Inquiry</option>
+            <option>Partnership Inquiry</option>
+            <option>Donation / Support</option>
+            <option>General Question</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Message</label><textarea id="n-message" placeholder="How can we help you?"></textarea></div>
+        <button class="btn-submit" onclick="handleNewsSubmit()">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-flag"></div>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo"><img src="images/img004.png" alt="Philippine Global Media Group"></div>
+      <p class="footer-desc">A nonprofit media organization dedicated to community journalism, cultural storytelling, and civic engagement for Filipinos and Filipino Americans worldwide.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61560143865748" target="_blank" class="social-btn"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="mailto:info@pgmg.org" class="social-btn"><svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></a>
+        <a href="https://pgmg.org" class="social-btn"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg></a>
+      </div>
+      <span class="nonprofit-badge">501(c)(3) Registered Nonprofit</span>
+    </div>
+    <div class="footer-col"><h4>Pages</h4><ul>
+      <li><a href="https://pgmg.org#about">About</a></li>
+      <li><a href="/history/">History</a></li>
+      <li><a href="https://pgmg.org#officers">Officers</a></li>
+      <li><a href="https://pgmg.org#events">Events</a></li>
+      <li><a href="/news/">News</a></li>
+      <li><a href="https://pgmg.org/gallery/">Gallery</a></li>
+      <li><a href="https://pgmg.org/scholarship/">Scholarship</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Get Involved</h4><ul>
+      <li><a href="mailto:info@pgmg.org">Submit a Story</a></li>
+      <li><a href="mailto:info@pgmg.org">Partner With Us</a></li>
+      <li><a href="mailto:info@pgmg.org">Donate</a></li>
+      <li><a href="https://pgmg.org#events">Events</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><a href="mailto:info@pgmg.org">info@pgmg.org</a></li>
+      <li><a href="https://pgmg.org" target="_blank">pgmg.org</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=61560143865748" target="_blank">Facebook Page</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>2025 Philippine Global Media Group. All rights reserved. Registered 501(c)(3) Nonprofit Organization.</span>
+    <span><a href="mailto:info@pgmg.org">Privacy</a> &nbsp;&middot;&nbsp; <a href="mailto:info@pgmg.org">Terms</a></span>
+  </div>
+</footer>
+
+<script>
+// ── HERO SLIDESHOW ──
+var slideData = [
+  {tag:'Press Release',label:'August 2026',title:'PGMG to Hold Induction of Officers and Gala Night',excerpt:'August 8, 2026 at 6:00 PM - Crystal Ballroom, Sheraton Cerritos Hotel. Proceeds benefit the Manny Ilagan Memorial Scholarship Program.',cta:'Reserve Your Seat',link:'mailto:info@pgmg.org'},
+  {tag:'TOP Awards',label:'2026 Recognition',title:'Dan Nino Honored at the 2026 TOP Awards',excerpt:'PGMG President Dan Nino receives the prestigious 2026 TOP (The Outstanding Pilipinos) Award for outstanding achievement in Journalism.',cta:'Read More',link:'#top-awards'},
+  {tag:'TOP Awards',label:'2026 Recognition',title:'Ellen Rodriguez-Swing Honored at the 2026 TOP Awards',excerpt:'PGMG Public Relations Officer Ellen Rodriguez-Swing receives the 2026 TOP Award for outstanding community service and exemplary leadership.',cta:'Read More',link:'#top-awards'},
+  {tag:'Events',label:'City of Carson',title:'PGMG at the Carson Philippine Independence Day Celebration',excerpt:'PGMG members took to the stage at the City of Carson Philippine Independence Day Celebration, proudly representing the Filipino media community.',cta:'View Gallery',link:'https://pgmg.org/gallery.html'},
+  {tag:'Events',label:'Philippine Consulate',title:'PGMG at the Philippine Consulate Independence Day Celebration',excerpt:'PGMG members attended the Philippine Consulate Independence Day celebration, representing the organization in traditional Filipino attire.',cta:'View Gallery',link:'https://pgmg.org/gallery.html'},
+  {tag:'Events',label:'June 15, 2026',title:'PGMG Officers Meet Presidential Assistant Ana Carmela Remigio',excerpt:'PGMG officers attended the reception hosted by the Philippine Consulate General in Los Angeles at the Los Angeles Public Library.',cta:'View Gallery',link:'https://pgmg.org/gallery.html'},
+];
+
+var current = 0;
+var timer;
+var slides = document.querySelectorAll('.hero-slide');
+var dots   = document.querySelectorAll('.hero-dot');
+
+function goSlide(n) {
+  slides[current].classList.remove('active');
+  dots[current].classList.remove('active');
+  current = (n + slides.length) % slides.length;
+  slides[current].classList.add('active');
+  dots[current].classList.add('active');
+  var d = slideData[current];
+  document.getElementById('heroTag').textContent     = d.tag;
+  document.getElementById('heroLabel').textContent   = d.label;
+  document.getElementById('heroTitle').innerHTML     = d.title;
+  document.getElementById('heroExcerpt').innerHTML   = d.excerpt;
+  document.getElementById('heroCta').textContent     = d.cta;
+  document.getElementById('heroCta').href            = d.link;
+  document.getElementById('heroCounter').textContent = (current+1) + ' / ' + slides.length;
+}
+function nextSlide() { clearInterval(timer); goSlide(current+1); startTimer(); }
+function prevSlide() { clearInterval(timer); goSlide(current-1); startTimer(); }
+function startTimer() { timer = setInterval(function(){goSlide(current+1);}, 5000); }
+startTimer();
+
+// ── ARTICLE FILTER + SEARCH ──
+function filterArticles(cat, btn) {
+  // Update top filter buttons
+  document.querySelectorAll('.db-filter-btn').forEach(function(b){b.classList.remove('active');});
+  if(btn.classList.contains('db-filter-btn')) btn.classList.add('active');
+  // Update sidebar tag pills
+  document.querySelectorAll('.tag-pill').forEach(function(b){b.classList.remove('active');});
+  if(btn.classList.contains('tag-pill')) btn.classList.add('active');
+
+  var rows = document.querySelectorAll('.article-row');
+  var visible = 0;
+  rows.forEach(function(row){
+    var match = cat==='all' || row.dataset.cat===cat;
+    row.style.display = match ? 'grid' : 'none';
+    if(match) visible++;
+  });
+  document.getElementById('noResults').style.display = visible===0 ? 'block' : 'none';
+  currentFilter = cat;
+}
+
+var currentFilter = 'all';
+function syncFilter(pill) {
+  // When sidebar pill clicked, also sync top buttons
+  document.querySelectorAll('.db-filter-btn').forEach(function(b){b.classList.remove('active');});
+  var cat = pill.textContent.toLowerCase().replace(' ','');
+  document.querySelectorAll('.db-filter-btn').forEach(function(b){
+    if(b.textContent.toLowerCase().replace(' ','')===cat) b.classList.add('active');
+  });
+}
+
+function searchArticles(query) {
+  var q = query.toLowerCase();
+  var rows = document.querySelectorAll('.article-row');
+  var visible = 0;
+  rows.forEach(function(row){
+    var keywords = (row.dataset.keywords || '') + ' ' + row.querySelector('h4').textContent + ' ' + (row.querySelector('p')?row.querySelector('p').textContent:'');
+    var catMatch = currentFilter==='all' || row.dataset.cat===currentFilter;
+    var kwMatch  = !q || keywords.toLowerCase().includes(q);
+    var show = catMatch && kwMatch;
+    row.style.display = show ? 'grid' : 'none';
+    if(show) visible++;
+  });
+  document.getElementById('noResults').style.display = visible===0 ? 'block' : 'none';
+}
+
+// ── CONTACT FORM ──
+function handleNewsSubmit() {
+  var n = document.getElementById('n-name').value.trim();
+  var e = document.getElementById('n-email').value.trim();
+  var s = document.getElementById('n-subject').value;
+  var m = document.getElementById('n-message').value.trim();
+  if(!n||!e||!m){alert('Please fill in all required fields.');return;}
+  window.location.href='mailto:info@pgmg.org?subject='+encodeURIComponent(s||'Message from PGMG News Page')+'&body='+encodeURIComponent('Name: '+n+'%0A%0AMessage:%0A'+m);
+}
+
+// ── HAMBURGER ──
+var hbg=document.querySelector('.hamburger');
+var nl=document.querySelector('.nav-links');
+var mopen=false;
+if(hbg){hbg.addEventListener('click',function(){mopen=!mopen;nl.style.cssText=mopen?'display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:#fff;padding:1rem 2rem 1.5rem;border-bottom:1px solid #dde0ec;box-shadow:0 8px 24px rgba(27,44,107,.1);z-index:99;':'display:none;';});}
+
+// ── SMOOTH SCROLL ──
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var href=this.getAttribute('href');
+    if(!href||href==='#') return;
+    var t=document.querySelector(href);
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});if(window.innerWidth<=700){nl.style.display='none';mopen=false;}}
+  });
+});
+</script>
+</body>
+</html>

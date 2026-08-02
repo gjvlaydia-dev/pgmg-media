@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEWElEQVR42u2WW2xUVRSGv73PmftM22lraUd6kbYpSLnYViFQREw0oEYfDCExMZFE30yMCY8kkvhg1PioIcYYfSJRQzSRoCb4QEQIBhBDGRFQWii9UmaYmc6cOefs5cNMy01N0BAS0/26z17rX/9Z69tb0bFDuIdLc4/XgoAFAQsC7H9zSClBAShAQAARdfcEKEDrCq98oxAngAD4qrJrGQh4WJYBFL5RVHaqQpFqFDAo5E4EaC0Y18Iv2mAUhF0626exLaEu7qCUMHMtzNnRJH4uAkrQcQeDRiQAyqpGEhAD4qExmKog+59sFqMxuRDNqQzL267w9NrzbOq7yN6D3SxtnaG5vsC+H7uwAj7Prj/HkaEU3x9vY/+hbhKqwLLAZZrLs0TF5ZoOMq2jpIMN5KwYmHLV3b+4C5QWpBQgFimzdeMZQkGPrvszlMoWh39u4+XnTjDr2Oz6eAPnLiUhE2XbtqMMdE9QGyvTuTjD3re7KAyFWBGZZHD2Eo84YwCMWgl2Jgf5NLEKJS4Wdet23VZ5KcCSVIYXnzzFsdMp8q7N1LUIH+zeRO/qEcavRtnzzUo29A+zse8iD628iOvZ9HdP8u3xdp4fPEvdCpfPnB4+GVvLR4v6aHBzDDjj1IpDjzvD+zUDKPybf4FSgGvR2pzl4d5RPvyyj0jM4cGaEsfTKba/9AP9PeO8+s4W8CxOpVugpkQyWSDiWTTWznJ2NMnWN59hdccUj7cOIwXh2FAry71prGr7vZEcBCqNepMDc93efF+eg7+04rg20YTD6QuNZDMxnljzO+nhBtYsG6Ona5J4fREPyOZDZKcSFAGt4NjJxTzWP8J7+9cxkLrMu0MH2Fy8QE4HeaVxM3sSq9DiYFA3OyCAUcKvww2gBBX0mJqJgVG0LJ4hPVLP19/1EmnK0dmc5YGWLEvbrhCyffAUdYkiBBQ19UKBAK/5h9n51WEaKfJFrIedyUc5E2zCMiX86hTMN+HcvErVGrlxDEsBersnuJoPMT5Zg28ZcGzwqgwIGQjYkPDo1Bm2jFzg9cxRlrhZ9sU6eatmLYci7SAGS8r4NwDYvl69rjSBGMAwN73KCNp2mbgSJVsIYiy/QvAIoC3AIugVWZ/7gxfG0myZPY8oxefxpexuWs1voaZKdONUQHYL/e05I5r8PFFxmbDizOogvrKqvijQMFWIgjKAT9wU6SplGChPMFi6xAp3Gi2Gn0ItbF/0FAfC7RgrDMZFmxIK5i2/nbIdO0QBMfHoLU/T4WUJYip8BywxhMWnVhzq/RKNpkjClBFg3IpxMtjEkVCKdLARdAjEA1PGFoNRap54f4/5eRCpKjYNcd+hwRSpMw5RcbHF4ClNQQWYscJM6SiODoMOgAiIC+Jhi0GqSeXOLyNBi4ugyOsgeSvM8FxfzH8igAExaCmjPQdRIFSSekr/t9vwul2CEh+Fx62lSLU6g8IodffeA1JNtvAkWxCwIOB/L+BPyPXUn52JSAwAAAAASUVORK5CYII=">
+<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABrklEQVR42tWTz2oTURSHv3PnziQzdmpDrbG21KiotZu60o0IvoAbd4Jv4eP4BuLGjSAUrDtLobgyCxUJaLEmGdJqksnMvcfFzMK/q6w8q3Pg8uMcvu8KnUfKHGWYs+YOsH9NNYoAqqCAEfAqoCBUF2vd/RIgoqg3+HEIXiDwEDpcHkJYQgSKBfWg5Z8baGFJmjNuXP/M1fWMKCr58KlF0ih43V1lchiwZfscmwZvw2UUqQIEEBUurmVsXzoiCh2thSlH2SmORzE3bx3y4E6X/Z02B69WeTp6wsdgkdvnH2IFwAun0ymFwouDC2xtDBh9b9B9v0JoHc/3O+y+Wyc4o7RWpqTDGc8WrwAGqzWLbNwkO4kB+HoS86Z3lqWlHBsKiTFc6w+5u9ejPRhz79x9XsaXET+pNkh9jgK5sSBK/0tMms9YHkzYLIZsuiGiyuNkm912B0QI/BiHwYIQoKy5bywUBYkWNH1JJI4iCOhFKTt2g5FNK3guxyi4WiGrKJlpkgVJBR4FkeouMbUMJYGboAgewf0ukqA1V6l5Vs+kFqmazL9NrNySn5VC/5vP9AN2qavi/PsIFQAAAABJRU5ErkJggg==">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+<title>Gallery | Philippine Global Media Group</title>
+<meta name="description" content="Browse photos from PGMG meetings, events, press coverage, and community gatherings, a visual record of the Philippine Global Media Group.">
+<link rel="canonical" href="https://pgmg.org/gallery/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gallery | Philippine Global Media Group">
+<meta property="og:description" content="Browse photos from PGMG meetings, events, press coverage, and community gatherings, a visual record of the Philippine Global Media Group.">
+<meta property="og:url" content="https://pgmg.org/gallery/">
+<meta property="og:image" content="https://pgmg.org/gallery/images/img002.png">
+<meta property="og:site_name" content="Philippine Global Media Group">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gallery | Philippine Global Media Group">
+<meta name="twitter:description" content="Browse photos from PGMG meetings, events, press coverage, and community gatherings, a visual record of the Philippine Global Media Group.">
+<meta name="twitter:image" content="https://pgmg.org/gallery/images/img002.png">
+<style>
+:root {
+  --navy:#1B2C6B; --navy-dark:#0F1A45;
+  --red:#CC1B1B; --red-dark:#A01414;
+  --gold:#F5C518; --gold-dark:#D4A800;
+  --white:#FFFFFF; --offwhite:#F5F6FA;
+  --gray:#E8EAF2; --text:#0F1A45; --muted:#5A6080;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Arial Black',Arial,sans-serif;color:var(--text);background:var(--white);}
+p,span,a,li,label,small{font-family:Arial,Helvetica,sans-serif;}
+
+/* TOPBAR */
+.topbar{background:var(--navy-dark);color:rgba(255,255,255,.8);font-family:Arial,sans-serif;font-size:12px;letter-spacing:.04em;padding:7px 0;text-align:center;border-bottom:3px solid var(--gold);}
+.topbar a{color:var(--gold);text-decoration:none;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid #dde0ec;box-shadow:0 2px 16px rgba(27,44,107,.1);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:76px;}
+.nav-logo{display:flex;align-items:center;text-decoration:none;}
+.nav-logo img{height:58px;width:auto;}
+.nav-links{display:flex;align-items:center;gap:1.6rem;list-style:none;}
+.nav-links a{font-family:'Arial Black',Arial,sans-serif;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);text-decoration:none;transition:color .2s;padding-bottom:3px;white-space:nowrap;border-bottom:2px solid transparent;}
+.nav-links a:hover{color:var(--red);border-bottom-color:var(--red);}
+.nav-links a.active{color:var(--red);border-bottom-color:var(--red);}
+.nav-cta{background:var(--red)!important;color:var(--white)!important;padding:9px 22px!important;border-radius:3px!important;border-bottom:none!important;}
+.nav-cta:hover{background:var(--red-dark)!important;}
+.hamburger{display:none;cursor:pointer;background:none;border:none;padding:4px;}
+.hamburger span{display:block;width:24px;height:2px;background:var(--navy);border-radius:2px;margin:5px 0;}
+
+/* PAGE HEADER */
+.page-header{background:var(--navy-dark);color:var(--white);padding:4rem 2rem 3.5rem;text-align:center;position:relative;overflow:hidden;}
+.page-header::before{content:'';position:absolute;inset:0;background-image:url('images/img001.jpg');background-size:cover;background-position:center;opacity:.18;}
+.page-header-flag{height:4px;background:linear-gradient(90deg,var(--navy) 33%,var(--red) 33% 66%,var(--gold) 66%);position:absolute;top:0;left:0;right:0;}
+.page-header-content{position:relative;z-index:2;}
+.page-header-label{font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;display:block;}
+.page-header h1{font-family:'Arial Black',Arial,sans-serif;font-size:clamp(2rem,4vw,3.2rem);text-transform:uppercase;letter-spacing:.04em;line-height:1.1;margin-bottom:1rem;}
+.page-header p{font-family:Arial,sans-serif;font-size:1rem;color:rgba(255,255,255,.75);max-width:560px;margin:0 auto;line-height:1.75;}
+
+/* FILTER BAR */
+.filter-bar{background:var(--white);border-bottom:1px solid var(--gray);padding:.9rem 0;position:sticky;top:76px;z-index:90;}
+.filter-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;}
+.filter-btn{font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:7px 18px;border-radius:3px;border:1.5px solid var(--gray);background:var(--white);color:var(--muted);cursor:pointer;transition:all .2s;}
+.filter-btn:hover{border-color:var(--navy);color:var(--navy);}
+.filter-btn.active{background:var(--navy);color:var(--white);border-color:var(--navy);}
+.filter-label{font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-right:.25rem;}
+
+/* GALLERY SECTION */
+.gallery-section{padding:3.5rem 0 5rem;background:var(--offwhite);}
+.gallery-container{max-width:1200px;margin:0 auto;padding:0 2rem;}
+
+/* Featured 2-up */
+.gallery-featured{display:grid;grid-template-columns:1.4fr 1fr;gap:1.25rem;margin-bottom:1.25rem;}
+.gallery-item{break-inside:avoid;margin-bottom:1.25rem;border-radius:6px;overflow:hidden;position:relative;cursor:pointer;display:block;}
+.gallery-featured .gallery-item{margin-bottom:0;}
+.gallery-featured .gallery-item img{height:400px;width:100%;object-fit:cover;display:block;transition:transform .4s ease;}
+.gallery-featured .gallery-item:hover img{transform:scale(1.04);}
+
+/* Masonry grid */
+.gallery-grid{columns:3;column-gap:1.25rem;}
+.gallery-item img{width:100%;display:block;transition:transform .4s ease;}
+.gallery-item:hover img{transform:scale(1.04);}
+
+/* Caption overlay */
+.gallery-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(15,26,69,.9) 100%);opacity:0;transition:opacity .3s;display:flex;flex-direction:column;justify-content:flex-end;padding:1.25rem;}
+.gallery-item:hover .gallery-overlay{opacity:1;}
+.gallery-overlay-tag{font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--white);background:var(--red);display:inline-block;padding:3px 10px;border-radius:2px;width:fit-content;margin-bottom:6px;}
+.gallery-overlay h3{font-family:'Arial Black',Arial,sans-serif;font-size:14px;color:var(--white);line-height:1.3;text-transform:uppercase;letter-spacing:.03em;}
+.gallery-overlay p{font-family:Arial,sans-serif;font-size:12px;color:rgba(255,255,255,.75);margin-top:4px;line-height:1.5;}
+
+/* PRESS CLIP CARD */
+.press-section{padding:3rem 0;background:var(--white);}
+.press-inner{max-width:1200px;margin:0 auto;padding:0 2rem;}
+.press-section .section-label{font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem;display:block;}
+.press-section h2{font-family:'Arial Black',Arial,sans-serif;font-size:1.8rem;text-transform:uppercase;letter-spacing:.02em;color:var(--navy);margin-bottom:2rem;}
+.press-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
+.press-img{border-radius:6px;overflow:hidden;box-shadow:0 8px 30px rgba(27,44,107,.15);}
+.press-img img{width:100%;display:block;}
+.press-details{display:flex;flex-direction:column;gap:1rem;}
+.press-tag{font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--white);background:var(--red);display:inline-block;padding:4px 12px;border-radius:2px;width:fit-content;}
+.press-details h3{font-family:'Arial Black',Arial,sans-serif;font-size:1.4rem;text-transform:uppercase;letter-spacing:.02em;color:var(--navy-dark);line-height:1.25;}
+.press-details p{font-family:Arial,sans-serif;font-size:14px;color:var(--muted);line-height:1.8;}
+.press-meta{font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-dark);}
+.press-link{display:inline-block;font-family:'Arial Black',Arial,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--red);text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:2px;transition:color .2s;}
+.press-link:hover{color:var(--navy);}
+
+/* LIGHTBOX */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(10,15,40,.95);z-index:1000;align-items:center;justify-content:center;padding:2rem;}
+.lightbox.open{display:flex;}
+.lightbox-content{position:relative;max-width:900px;width:100%;}
+.lightbox-content img{width:100%;border-radius:6px;display:block;max-height:80vh;object-fit:contain;}
+.lightbox-close{position:absolute;top:-2.5rem;right:0;font-family:'Arial Black',Arial,sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);cursor:pointer;background:none;border:none;transition:color .2s;}
+.lightbox-close:hover{color:var(--gold);}
+.lightbox-meta{margin-top:1rem;}
+.lightbox-meta-tag{font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--white);background:var(--red);padding:3px 10px;border-radius:2px;display:inline-block;margin-bottom:8px;}
+.lightbox-meta h3{font-family:'Arial Black',Arial,sans-serif;font-size:1.1rem;color:var(--white);text-transform:uppercase;letter-spacing:.03em;}
+.lightbox-meta p{font-family:Arial,sans-serif;font-size:13px;color:rgba(255,255,255,.65);margin-top:6px;line-height:1.6;}
+.lightbox-nav{display:flex;gap:1rem;margin-top:1.25rem;}
+.lightbox-nav button{font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:8px 20px;border-radius:3px;border:1.5px solid rgba(255,255,255,.25);background:transparent;color:rgba(255,255,255,.7);cursor:pointer;transition:all .2s;}
+.lightbox-nav button:hover{border-color:var(--gold);color:var(--gold);}
+
+/* FOOTER */
+footer{background:var(--white);color:var(--muted);border-top:1px solid var(--gray);padding:4rem 0 0;}
+.footer-flag{height:4px;background:linear-gradient(90deg,var(--navy-dark) 33%,var(--red) 33% 66%,var(--gold) 66%);}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;max-width:1200px;margin:0 auto;padding:3rem 2rem;border-bottom:1px solid var(--gray);}
+.footer-logo img{height:60px;width:auto;margin-bottom:1rem;}
+.footer-desc{font-family:Arial,sans-serif;font-size:14px;line-height:1.75;color:var(--muted);margin-bottom:1.25rem;}
+.footer-social{display:flex;gap:10px;}
+.social-btn{width:36px;height:36px;background:var(--offwhite);border:1px solid var(--gray);border-radius:4px;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:background .2s,border-color .2s;}
+.social-btn:hover{background:var(--navy);border-color:var(--navy);}
+.social-btn:hover svg{fill:var(--white);}
+.social-btn svg{width:16px;height:16px;fill:var(--navy);transition:fill .2s;}
+.nonprofit-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(27,44,107,.07);border:1px solid rgba(27,44,107,.15);color:var(--navy);font-family:'Arial Black',Arial,sans-serif;font-size:10px;padding:4px 12px;border-radius:100px;letter-spacing:.1em;}
+.footer-col h4{font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin-bottom:1rem;}
+.footer-col ul{list-style:none;}
+.footer-col ul li{margin-bottom:8px;}
+.footer-col ul a{font-size:14px;color:var(--muted);text-decoration:none;transition:color .2s;}
+.footer-col ul a:hover{color:var(--red);}
+.footer-bottom{max-width:1200px;margin:0 auto;padding:1.25rem 2rem;display:flex;justify-content:space-between;align-items:center;font-family:Arial,sans-serif;font-size:12px;flex-wrap:wrap;gap:1rem;}
+.footer-bottom a{color:var(--muted);text-decoration:none;}
+.footer-bottom a:hover{color:var(--red);}
+
+@media(max-width:900px){
+  .gallery-grid{columns:2;}
+  .gallery-featured{grid-template-columns:1fr;}
+  .gallery-featured .gallery-item img{height:280px;}
+  .press-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:1100px){
+  .nav-links{display:none;}
+  .hamburger{display:block;}
+  .gallery-grid{columns:1;}
+  .footer-grid{grid-template-columns:1fr;}
+  .filter-inner{gap:.5rem;}
+  .filter-btn{font-size:10px;padding:6px 12px;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  Philippine Global Media Group &nbsp;|&nbsp; 501(c)(3) Nonprofit &nbsp;|&nbsp;
+  <a href="mailto:info@pgmg.org">info@pgmg.org</a> &nbsp;|&nbsp;
+  <a href="https://pgmg.org">pgmg.org</a> &nbsp;|&nbsp; <a href="https://www.facebook.com/profile.php?id=61560143865748" target="_blank">Facebook</a>
+</div>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="https://pgmg.org" class="nav-logo">
+      <img src="images/img002.png" alt="Philippine Global Media Group">
+    </a>
+    <ul class="nav-links">
+      <li><a href="https://pgmg.org#about">About</a></li>
+      <li><a href="/history/">History</a></li>
+      <li><a href="https://pgmg.org#officers">Officers</a></li>
+      <li><a href="https://pgmg.org#events">Events</a></li>
+      <li><a href="https://pgmg.org/news/">News</a></li>
+      <li><a href="https://pgmg.org/gallery/" class="active">Gallery</a></li>
+      <li><a href="https://pgmg.org/scholarship/">Scholarship</a></li>
+      <li><a href="https://pgmg.org#contact">Contact</a></li>
+      <li><a href="https://pgmg.org#contact" class="nav-cta">Get Involved</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-flag"></div>
+  <div class="page-header-content">
+    <span class="page-header-label">Philippine Global Media Group</span>
+    <h1>Photo Gallery</h1>
+    <p>A visual record of our community — meetings, events, milestones, and the people behind the stories we tell.</p>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <div class="filter-inner">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-btn active" onclick="filterGallery('all',this)">All</button>
+    <button class="filter-btn" onclick="filterGallery('meetings',this)">Meetings</button>
+    <button class="filter-btn" onclick="filterGallery('events',this)">Events</button>
+    <button class="filter-btn" onclick="filterGallery('community',this)">Community</button>
+    <button class="filter-btn" onclick="filterGallery('press',this)">Press</button>
+    <button class="filter-btn" onclick="filterGallery('top-awards',this)">TOP Awards</button>
+    <button class="filter-btn" onclick="filterGallery('independence',this)">Independence Day</button>
+  </div>
+</div>
+
+<section class="gallery-section">
+  <div class="gallery-container">
+
+    <!-- Featured 3-up row -->
+    <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:1.25rem;margin-bottom:1.25rem;">
+      <div class="gallery-item" data-cat="independence" onclick="openLightbox(0)" style="margin-bottom:0;">
+        <img src="images/img003.jpg" alt="Carson Philippine Independence Day" style="height:340px;width:100%;object-fit:cover;object-position:center top;display:block;transition:transform .4s ease;">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Independence Day</span>
+          <h3>City of Carson Philippine Independence Day</h3>
+          <p>PGMG members on stage at the City of Carson Philippine Independence Day Celebration.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="independence" onclick="openLightbox(1)" style="margin-bottom:0;">
+        <img src="images/img004.jpg" alt="Carson Philippine Independence Day — PGMG Banner" style="height:340px;width:100%;object-fit:cover;object-position:center;display:block;transition:transform .4s ease;">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Independence Day</span>
+          <h3>PGMG at Carson Independence Day</h3>
+          <p>PGMG members proudly holding the banner at the Carson Philippine Independence Day celebration.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="independence" onclick="openLightbox(2)" style="margin-bottom:0;">
+        <img src="images/img005.jpg" alt="Philippine Consulate Independence Day" style="height:340px;width:100%;object-fit:cover;object-position:center top;display:block;transition:transform .4s ease;">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Independence Day</span>
+          <h3>Philippine Consulate Independence Day</h3>
+          <p>PGMG members at the Philippine Consulate Philippine Independence Day celebration.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Masonry grid -->
+    <div class="gallery-grid" id="galleryGrid">
+
+      <div class="gallery-item" data-cat="independence" onclick="openLightbox(3)">
+        <img src="images/img006.jpg" alt="Philippine Consulate Independence Day — Members">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Independence Day</span>
+          <h3>Consulate Independence Day — Members</h3>
+          <p>PGMG members dressed in traditional Filipino attire at the Philippine Consulate event.</p>
+        </div>
+      </div>
+
+
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(6)">
+        <img src="images/img007.png" alt="PGMG Planning Meeting">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>Editorial Planning Session</h3>
+          <p>PGMG members in a lively discussion around the table, laying out plans for community coverage.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="community" onclick="openLightbox(7)">
+        <img src="images/img008.png" alt="PGMG Group Selfie">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Community</span>
+          <h3>PGMG Members Gathering</h3>
+          <p>Officers, members, and guests sharing a warm moment together.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(8)">
+        <img src="images/img009.png" alt="PGMG Lunch Meeting">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>Lunch Strategy Session</h3>
+          <p>PGMG team members connecting over lunch to plan upcoming community initiatives.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="community" onclick="openLightbox(10)">
+        <img src="images/img010.png" alt="PGMG Large Group Gathering">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Community</span>
+          <h3>Members Gathering</h3>
+          <p>A large PGMG family gathering — good food, great company, and community spirit.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="top-awards" onclick="openLightbox(11)">
+        <img src="images/img011.jpg" alt="Dan Nino — 2026 TOP Award">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">TOP Awards</span>
+          <h3>Dan Nino — 2026 TOP Awardee</h3>
+          <p>PGMG President honored with the California Legislature Assembly Certificate of Recognition.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="top-awards" onclick="openLightbox(12)">
+        <img src="images/img012.jpg" alt="Ellen Rodriguez-Swing — 2026 TOP Award">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">TOP Awards</span>
+          <h3>Ellen Rodriguez-Swing — 2026 TOP Awardee</h3>
+          <p>PGMG Public Relations Officer recognized for outstanding community service.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="independence" onclick="openLightbox(13)">
+        <img src="images/img013.jpg" alt="PGMG with Presidential Assistant Ana Carmela Remigio">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Events</span>
+          <h3>PGMG Officers with Presidential Assistant Remigio</h3>
+          <p>Philippine Consulate General Reception at the Los Angeles Public Library — June 15, 2026.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="independence" onclick="openLightbox(14)">
+        <img src="images/img014.jpg" alt="Val Abelgas with Presidential Assistant Ana Carmela Remigio">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Events</span>
+          <h3>Val Abelgas with Presidential Assistant Remigio</h3>
+          <p>Philippine Consulate General Reception — Los Angeles Public Library, June 15, 2026.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="independence" onclick="openLightbox(15)">
+        <img src="images/img015.jpg" alt="PGMG Officers at Philippine Consulate Reception">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Events</span>
+          <h3>PGMG at Philippine Consulate General Reception</h3>
+          <p>Officers at the Los Angeles Public Library reception — June 15, 2026.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="community" onclick="openLightbox(16)">
+        <img src="images/img016.jpg" alt="PGMG June 20 Meeting">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Community</span>
+          <h3>PGMG June 20 Meeting</h3>
+          <p>PGMG members gather for the June 20, 2026 meeting. New members welcomed: Fernandico Gonong Jr., Miguel Patolot, Rudy Autor, and Cergen Go.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="community" onclick="openLightbox(17)">
+        <img src="images/img017.jpg" alt="Birthday Celebration of Meg Estrada Ilagan">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Community</span>
+          <h3>Birthday Celebration — Treasurer Meg Estrada Ilagan</h3>
+          <p>PGMG celebrates the birthday of Treasurer Meg Estrada Ilagan at the June 20, 2026 meeting.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(18)">
+        <img src="images/img018.jpg" alt="Leadership Planning Session">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>Leadership Planning Session</h3>
+          <p>PGMG leaders gather under a backyard tent to map out plans for the upcoming Induction and Gala Night.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(19)">
+        <img src="images/img019.jpg" alt="Reviewing the Details">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>Reviewing the Details</h3>
+          <p>Officers go over notes and logistics ahead of PGMG's second Induction and Gala Night.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(20)">
+        <img src="images/img020.jpg" alt="A Working Lunch">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>A Working Lunch</h3>
+          <p>The planning team breaks for a meal between sessions while mapping out the induction gala.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(21)">
+        <img src="images/img021.jpg" alt="Committee Check-In">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>Committee Check-In</h3>
+          <p>PGMG officers review sign-up sheets and planning documents for the induction gala.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(22)">
+        <img src="images/img022.jpg" alt="The Planning Team">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>The Planning Team</h3>
+          <p>PGMG leadership poses together after a day of planning for the upcoming Induction and Gala Night.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(23)">
+        <img src="images/img023.jpg" alt="Talking Through the Program">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>Talking Through the Program</h3>
+          <p>Officers discuss program details for the induction gala over the planning table.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(24)">
+        <img src="images/img024.jpg" alt="Break Between Sessions">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>Break Between Sessions</h3>
+          <p>The planning committee shares a meal between rounds of gala preparations.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(25)">
+        <img src="images/img025.jpg" alt="A Quiet Moment">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>A Quiet Moment</h3>
+          <p>Officers catch up on the sofa during a break in the day's planning.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(26)">
+        <img src="images/img026.jpg" alt="Mapping Out the Gala">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>Mapping Out the Gala</h3>
+          <p>PGMG leadership continues its planning session for the upcoming Induction and Gala Night.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(27)">
+        <img src="images/img027.jpg" alt="All in the Plan">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>All in the Plan</h3>
+          <p>More of PGMG's leadership team gathered to finalize plans for the induction gala.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="top-awards" onclick="openLightbox(28)">
+        <img src="images/img028.jpg" alt="Val Abelgas Named First TOP Media Awardee">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">TOP Awards</span>
+          <h3>Val Abelgas Named First TOP Media Awardee</h3>
+          <p>Val Abelgas (fourth from left) receives the TOP (The Outstanding Pilipinos) Award for Media, honored alongside Richard Jimenez (Tourism), Atty. Roman Mosqueda (Law), Jimmy Borja (Music), Melette Lampino (Environmental Science), and Cecilia De Castro (Culinary Arts).</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(29)">
+        <img src="images/img029.jpg" alt="Planning Session at Home">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>Planning Session at Home</h3>
+          <p>PGMG members gather around the dining table for a planning meeting.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="community" onclick="openLightbox(30)">
+        <img src="images/img030.jpg" alt="Outside Blooming Vietnamese Cuisine">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Community</span>
+          <h3>Outside Blooming Vietnamese Cuisine</h3>
+          <p>PGMG members and guests pose together after a meal in the parking lot.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="community" onclick="openLightbox(31)">
+        <img src="images/img031.jpg" alt="Sharing Dessert">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Community</span>
+          <h3>Sharing Dessert</h3>
+          <p>Members enjoy dessert together during a PGMG gathering.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="community" onclick="openLightbox(32)">
+        <img src="images/img032.jpg" alt="Gathered Around the Table">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Community</span>
+          <h3>Gathered Around the Table</h3>
+          <p>PGMG members and guests pose for a group photo during a gathering.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="community" onclick="openLightbox(33)">
+        <img src="images/img033.jpg" alt="Group Photo in the Garage">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Community</span>
+          <h3>Group Photo in the Garage</h3>
+          <p>PGMG members pose for a formal group photo.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(34)">
+        <img src="images/img034.jpg" alt="PGMG Polo Day">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>PGMG Polo Day</h3>
+          <p>Members wearing PGMG polos gather around the table for a planning meeting.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="community" onclick="openLightbox(35)">
+        <img src="images/img035.jpg" alt="Celebrating with Cake">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Community</span>
+          <h3>Celebrating with Cake</h3>
+          <p>PGMG members celebrate with cake during a gathering.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="community" onclick="openLightbox(36)">
+        <img src="images/img036.jpg" alt="Potluck Spread">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Community</span>
+          <h3>Potluck Spread</h3>
+          <p>Members serve themselves from a potluck spread during a PGMG gathering.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="events" onclick="openLightbox(37)">
+        <img src="images/img037.jpg" alt="Love the Philippines Tourism Event">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Events</span>
+          <h3>Love the Philippines Tourism Event</h3>
+          <p>PGMG members attend the Very Important Pinoy Tour 2026 event with the Philippine Department of Tourism.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="community" onclick="openLightbox(38)">
+        <img src="images/img038.jpg" alt="All Smiles at the Gathering">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Community</span>
+          <h3>All Smiles at the Gathering</h3>
+          <p>PGMG members and guests share a group photo during a gathering.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(39)">
+        <img src="images/img039.jpg" alt="Discussion Around the Table">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>Discussion Around the Table</h3>
+          <p>Members discuss plans during a PGMG meeting.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(40)">
+        <img src="images/img040.jpg" alt="Meeting in the Garage">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>Meeting in the Garage</h3>
+          <p>PGMG members meet and review documents together.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(41)">
+        <img src="images/img041.jpg" alt="Planning Over Lunch">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>Planning Over Lunch</h3>
+          <p>Members gather to plan and discuss over refreshments.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="community" onclick="openLightbox(42)">
+        <img src="images/img042.jpg" alt="Dinner Together">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Community</span>
+          <h3>Dinner Together</h3>
+          <p>PGMG members and guests enjoy dinner together.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="community" onclick="openLightbox(43)">
+        <img src="images/img043.jpg" alt="Serving Up the Buffet">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Community</span>
+          <h3>Serving Up the Buffet</h3>
+          <p>Members enjoy a potluck spread together.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(44)">
+        <img src="images/img044.jpg" alt="Talking It Through">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>Talking It Through</h3>
+          <p>PGMG members review notes during a planning session.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="community" onclick="openLightbox(45)">
+        <img src="images/img045.jpg" alt="Birthday Celebration">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Community</span>
+          <h3>Birthday Celebration</h3>
+          <p>PGMG members celebrate a birthday with cake.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(46)">
+        <img src="images/img046.jpg" alt="Around the Table">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>Around the Table</h3>
+          <p>Members continue their discussion around the dining table.</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(47)">
+        <img src="images/img047.jpg" alt="Lunch Meeting at Blooming Vietnamese Restaurant">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>Lunch Meeting at Blooming Vietnamese Restaurant</h3>
+          <p>PGMG members share a meal while discussing the group's upcoming projects, March 17, 2025.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="meetings" onclick="openLightbox(48)">
+        <img src="images/img048.jpg" alt="Discussing Upcoming Projects">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Meetings</span>
+          <h3>Discussing Upcoming Projects</h3>
+          <p>Members review notes and plans during a meeting at Blooming Vietnamese Restaurant in Cerritos, March 17, 2025.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="community" onclick="openLightbox(49)">
+        <img src="images/img049.jpg" alt="All Smiles at Blooming Vietnamese Restaurant">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Community</span>
+          <h3>All Smiles at Blooming Vietnamese Restaurant</h3>
+          <p>PGMG members gather for a group photo during their March 17, 2025 meeting in Cerritos.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="community" onclick="openLightbox(50)">
+        <img src="images/img050.jpg" alt="Celebrating Dan Niño's Birthday">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Community</span>
+          <h3>Celebrating Dan Niño's Birthday</h3>
+          <p>PGMG members celebrate Chairman Dan Niño's birthday during their March 17, 2025 meeting at Blooming Vietnamese Restaurant.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="press" onclick="openLightbox(51)">
+        <img src="images/img051.jpg" alt="DOT VIP Tour 2024 Press Briefing">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Press</span>
+          <h3>DOT VIP Tour 2024 Press Briefing</h3>
+          <p>Newspaper coverage of PGMG officers and members at the press briefing for the Philippine Department of Tourism's VIP Tour, June 6, 2024.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="press" onclick="openLightbox(52)">
+        <img src="images/img052.jpg" alt="Philippine Post, Jan. 9, 2026 — Page 13">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Press</span>
+          <h3>Philippine Post, Jan. 9, 2026 — Page 13</h3>
+          <p>PGMG's second Christmas party coverage continues on page 13 of the Philippine Post.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="press" onclick="openLightbox(53)">
+        <img src="images/img053.jpg" alt="Philippine Post, Jan. 9, 2026 — Page 12">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Press</span>
+          <h3>Philippine Post, Jan. 9, 2026 — Page 12</h3>
+          <p>The Philippine Post covers PGMG's second Christmas party: a night of fun, food, games, camaraderie, and karaoke.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="community" onclick="openLightbox(54)">
+        <img src="images/img054.jpg" alt="PGMG's Second Christmas Party">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-tag">Community</span>
+          <h3>PGMG's Second Christmas Party</h3>
+          <p>PGMG members and guests gather at Pia Legaspi's Mi Amore office hall in Cerritos for their second Christmas party, December 28, 2025.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESS SECTION -->
+<section class="press-section" id="press">
+  <div class="press-inner">
+    <span class="section-label">In the News</span>
+    <h2>PGMG in the Press</h2>
+    <div class="press-grid">
+      <div class="press-img">
+        <img src="images/img055.png" alt="Philippine Post — PGMG Night of Fun, Food and Camaraderie">
+      </div>
+      <div class="press-details">
+        <span class="press-tag">Philippine Post</span>
+        <p class="press-meta">January 9, 2026 &nbsp;·&nbsp; Page 13</p>
+        <h3>PGMG: A Night of Fun, Food and Camaraderie</h3>
+        <p>The Philippine Post covered PGMG's holiday party — a five-hour celebration of community spirit featuring a sumptuous buffet dinner, raffles, games, and karaoke. Members and guests gathered for an evening of kwentuhan, kainan, kantahan at katuwaan, capping off the year with warmth and laughter.</p>
+        <p style="margin-top:.75rem">The group looked forward to next year's events and projects, including a planned fund-raiser for a scholarship program for Filipino journalism and mass communication students.</p>
+        <a href="https://pgmg.org#events" class="press-link">See Upcoming Events</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
+  <div class="lightbox-content">
+    <button class="lightbox-close" onclick="closeLightbox()">Close &times;</button>
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-meta">
+      <span class="lightbox-meta-tag" id="lightboxTag"></span>
+      <h3 id="lightboxTitle"></h3>
+      <p id="lightboxDesc"></p>
+    </div>
+    <div class="lightbox-nav">
+      <button onclick="lightboxPrev()">&#8592; Previous</button>
+      <button onclick="lightboxNext()">Next &#8594;</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-flag"></div>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo"><img src="images/img002.png" alt="Philippine Global Media Group"></div>
+      <p class="footer-desc">A nonprofit media organization dedicated to community journalism, cultural storytelling, and civic engagement for Filipinos and Filipino Americans worldwide.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61560143865748" target="_blank" class="social-btn"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="mailto:info@pgmg.org" class="social-btn"><svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></a>
+        <a href="https://pgmg.org" class="social-btn"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg></a>
+      </div>
+      <div style="margin-top:1rem"><span class="nonprofit-badge">501(c)(3) Registered Nonprofit</span></div>
+    </div>
+    <div class="footer-col"><h4>Pages</h4><ul>
+      <li><a href="https://pgmg.org#about">About</a></li>
+      <li><a href="/history/">History</a></li>
+      <li><a href="https://pgmg.org#platforms">Our Work</a></li>
+      <li><a href="https://pgmg.org#events">Events</a></li>
+      <li><a href="https://pgmg.org/gallery/">Gallery</a></li>
+      <li><a href="https://pgmg.org/scholarship/">Scholarship</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Get Involved</h4><ul>
+      <li><a href="mailto:info@pgmg.org">Submit a Story</a></li>
+      <li><a href="mailto:info@pgmg.org">Partner With Us</a></li>
+      <li><a href="mailto:info@pgmg.org">Donate</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><a href="mailto:info@pgmg.org">info@pgmg.org</a></li>
+      <li><a href="https://pgmg.org" target="_blank">pgmg.org</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=61560143865748" target="_blank">Facebook Page</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>2025 Philippine Global Media Group. All rights reserved. Registered 501(c)(3) Nonprofit Organization.</span>
+    <span><a href="mailto:info@pgmg.org">Privacy</a> &nbsp;&middot;&nbsp; <a href="mailto:info@pgmg.org">Terms</a></span>
+  </div>
+</footer>
+
+<script>
+var items = [
+  {src:'images/img003.jpg',    tag:'Independence Day', title:'City of Carson Philippine Independence Day',        desc:'PGMG members on stage at the City of Carson Philippine Independence Day Celebration.'},
+  {src:'images/img004.jpg',    tag:'Independence Day', title:'PGMG at Carson Independence Day',                   desc:'PGMG members proudly holding the banner at the Carson Philippine Independence Day celebration.'},
+  {src:'images/img005.jpg', tag:'Independence Day', title:'Philippine Consulate Independence Day',             desc:'PGMG members at the Philippine Consulate Philippine Independence Day celebration.'},
+  {src:'images/img006.jpg', tag:'Independence Day', title:'Consulate Independence Day — Members',             desc:'PGMG members in traditional Filipino attire at the Philippine Consulate event.'},
+  {src:'images/img056.png',     tag:'Meetings',         title:'PGMG Team Gathering',                              desc:'Members meeting with the Philippine Global Media Group banner.'},
+  {src:'images/img057.png',     tag:'Community',        title:'Community Luncheon',                               desc:'Members and supporters coming together over a shared meal and conversation.'},
+  {src:'images/img007.png',   tag:'Meetings',         title:'Editorial Planning Session',                       desc:'PGMG members in discussion laying out plans for community coverage.'},
+  {src:'images/img008.png',     tag:'Community',        title:'PGMG Members Gathering',                           desc:'Officers, members, and guests sharing a warm moment together.'},
+  {src:'images/img009.png',      tag:'Meetings',         title:'Lunch Strategy Session',                           desc:'PGMG team connecting over lunch to plan upcoming community initiatives.'},
+  {src:'images/img058.png',   tag:'Events',           title:'City of Cerritos',                                 desc:'PGMG members representing at the City of Cerritos official event.'},
+  {src:'images/img010.png',   tag:'Community',        title:'Members Gathering',                                desc:'A large PGMG family gathering with good food, great company, and community spirit.'},
+  {src:'images/img059.jpg',        tag:'TOP Awards',       title:'Dan Nino — 2026 TOP Awardee',                      desc:'PGMG President honored with the California Legislature Assembly Certificate of Recognition.'},
+  {src:'images/img012.jpg',      tag:'TOP Awards',       title:'Ellen Rodriguez-Swing — 2026 TOP Awardee',         desc:'PGMG PRO recognized with the California Legislature Assembly Certificate of Recognition.'},
+  {src:'images/img013.jpg', tag:'Events', title:'PGMG Officers with Presidential Assistant Ana Carmela Remigio', desc:'PGMG Officers with Presidential Assistant for Northern Luzon Ana Carmela Remigio at the reception hosted by the Philippine Consulate General in Los Angeles at the Los Angeles Public Library. June 15, 2026.'},
+    {src:'images/img014.jpg',   tag:'Events', title:'Val Abelgas with Presidential Assistant Ana Carmela Remigio',     desc:'PGMG Officers with Presidential Assistant for Northern Luzon Ana Carmela Remigio at the reception hosted by the Philippine Consulate General in Los Angeles at the Los Angeles Public Library. June 15, 2026.'},
+    {src:'images/img015.jpg', tag:'Events', title:'PGMG Officers at Philippine Consulate General Reception',         desc:'PGMG Officers with Presidential Assistant for Northern Luzon Ana Carmela Remigio at the reception hosted by the Philippine Consulate General in Los Angeles at the Los Angeles Public Library. June 15, 2026.'},
+    {src:'images/img016.jpg',  tag:'Community', title:'PGMG June 20 Meeting',                              desc:'PGMG members gather for the June 20, 2026 meeting. New members welcomed: Fernandico Gonong Jr., Miguel Patolot, Rudy Autor, and Cergen Go.'},
+    {src:'images/img017.jpg', tag:'Community', title:'Birthday Celebration - Treasurer Meg Estrada Ilagan', desc:'PGMG celebrates the birthday of Treasurer Meg Estrada Ilagan at the June 20, 2026 meeting.'},
+  {src:'images/img018.jpg', tag:'Meetings', title:'Leadership Planning Session', desc:'PGMG leaders gather under a backyard tent to map out plans for the upcoming Induction and Gala Night.'},
+  {src:'images/img019.jpg', tag:'Meetings', title:'Reviewing the Details', desc:'Officers go over notes and logistics ahead of PGMG\'s second Induction and Gala Night.'},
+  {src:'images/img020.jpg', tag:'Meetings', title:'A Working Lunch', desc:'The planning team breaks for a meal between sessions while mapping out the induction gala.'},
+  {src:'images/img021.jpg', tag:'Meetings', title:'Committee Check-In', desc:'PGMG officers review sign-up sheets and planning documents for the induction gala.'},
+  {src:'images/img022.jpg', tag:'Meetings', title:'The Planning Team', desc:'PGMG leadership poses together after a day of planning for the upcoming Induction and Gala Night.'},
+  {src:'images/img023.jpg', tag:'Meetings', title:'Talking Through the Program', desc:'Officers discuss program details for the induction gala over the planning table.'},
+  {src:'images/img024.jpg', tag:'Meetings', title:'Break Between Sessions', desc:'The planning committee shares a meal between rounds of gala preparations.'},
+  {src:'images/img025.jpg', tag:'Meetings', title:'A Quiet Moment', desc:'Officers catch up on the sofa during a break in the day\'s planning.'},
+  {src:'images/img026.jpg', tag:'Meetings', title:'Mapping Out the Gala', desc:'PGMG leadership continues its planning session for the upcoming Induction and Gala Night.'},
+  {src:'images/img027.jpg', tag:'Meetings', title:'All in the Plan', desc:'More of PGMG\'s leadership team gathered to finalize plans for the induction gala.'},
+  {src:'images/img028.jpg', tag:'TOP Awards', title:'Val Abelgas Named First TOP Media Awardee', desc:'Val Abelgas (fourth from left) receives the TOP (The Outstanding Pilipinos) Award for Media, honored alongside Richard Jimenez (Tourism), Atty. Roman Mosqueda (Law), Jimmy Borja (Music), Melette Lampino (Environmental Science), and Cecilia De Castro (Culinary Arts).'},
+  {src:'images/img029.jpg', tag:'Meetings', title:'Planning Session at Home', desc:'PGMG members gather around the dining table for a planning meeting.'},
+  {src:'images/img030.jpg', tag:'Community', title:'Outside Blooming Vietnamese Cuisine', desc:'PGMG members and guests pose together after a meal in the parking lot.'},
+  {src:'images/img031.jpg', tag:'Community', title:'Sharing Dessert', desc:'Members enjoy dessert together during a PGMG gathering.'},
+  {src:'images/img032.jpg', tag:'Community', title:'Gathered Around the Table', desc:'PGMG members and guests pose for a group photo during a gathering.'},
+  {src:'images/img033.jpg', tag:'Community', title:'Group Photo in the Garage', desc:'PGMG members pose for a formal group photo.'},
+  {src:'images/img034.jpg', tag:'Meetings', title:'PGMG Polo Day', desc:'Members wearing PGMG polos gather around the table for a planning meeting.'},
+  {src:'images/img035.jpg', tag:'Community', title:'Celebrating with Cake', desc:'PGMG members celebrate with cake during a gathering.'},
+  {src:'images/img036.jpg', tag:'Community', title:'Potluck Spread', desc:'Members serve themselves from a potluck spread during a PGMG gathering.'},
+  {src:'images/img037.jpg', tag:'Events', title:'Love the Philippines Tourism Event', desc:'PGMG members attend the Very Important Pinoy Tour 2026 event with the Philippine Department of Tourism.'},
+  {src:'images/img038.jpg', tag:'Community', title:'All Smiles at the Gathering', desc:'PGMG members and guests share a group photo during a gathering.'},
+  {src:'images/img039.jpg', tag:'Meetings', title:'Discussion Around the Table', desc:'Members discuss plans during a PGMG meeting.'},
+  {src:'images/img040.jpg', tag:'Meetings', title:'Meeting in the Garage', desc:'PGMG members meet and review documents together.'},
+  {src:'images/img041.jpg', tag:'Meetings', title:'Planning Over Lunch', desc:'Members gather to plan and discuss over refreshments.'},
+  {src:'images/img042.jpg', tag:'Community', title:'Dinner Together', desc:'PGMG members and guests enjoy dinner together.'},
+  {src:'images/img043.jpg', tag:'Community', title:'Serving Up the Buffet', desc:'Members enjoy a potluck spread together.'},
+  {src:'images/img044.jpg', tag:'Meetings', title:'Talking It Through', desc:'PGMG members review notes during a planning session.'},
+  {src:'images/img045.jpg', tag:'Community', title:'Birthday Celebration', desc:'PGMG members celebrate a birthday with cake.'},
+  {src:'images/img046.jpg', tag:'Meetings', title:'Around the Table', desc:'Members continue their discussion around the dining table.'},
+  {src:'images/img047.jpg', tag:'Meetings', title:'Lunch Meeting at Blooming Vietnamese Restaurant', desc:'PGMG members share a meal while discussing the group\'s upcoming projects, March 17, 2025.'},
+  {src:'images/img048.jpg', tag:'Meetings', title:'Discussing Upcoming Projects', desc:'Members review notes and plans during a meeting at Blooming Vietnamese Restaurant in Cerritos, March 17, 2025.'},
+  {src:'images/img049.jpg', tag:'Community', title:'All Smiles at Blooming Vietnamese Restaurant', desc:'PGMG members gather for a group photo during their March 17, 2025 meeting in Cerritos.'},
+  {src:'images/img050.jpg', tag:'Community', title:'Celebrating Dan Ni\u00f1o\'s Birthday', desc:'PGMG members celebrate Chairman Dan Ni\u00f1o\'s birthday during their March 17, 2025 meeting at Blooming Vietnamese Restaurant.'},
+  {src:'images/img051.jpg', tag:'Press', title:'DOT VIP Tour 2024 Press Briefing', desc:'Newspaper coverage of PGMG officers and members at the press briefing for the Philippine Department of Tourism\'s VIP Tour, June 6, 2024.'},
+  {src:'images/img052.jpg', tag:'Press', title:'Philippine Post, Jan. 9, 2026 — Page 13', desc:'PGMG\'s second Christmas party coverage continues on page 13 of the Philippine Post.'},
+  {src:'images/img053.jpg', tag:'Press', title:'Philippine Post, Jan. 9, 2026 — Page 12', desc:'The Philippine Post covers PGMG\'s second Christmas party: a night of fun, food, games, camaraderie, and karaoke.'},
+  {src:'images/img054.jpg', tag:'Community', title:'PGMG\'s Second Christmas Party', desc:'PGMG members and guests gather at Pia Legaspi\'s Mi Amore office hall in Cerritos for their second Christmas party, December 28, 2025.'},
+];
+
+var currentIndex = 0;
+
+function openLightbox(i) {
+  currentIndex = i;
+  updateLightbox();
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function updateLightbox() {
+  var it = items[currentIndex];
+  document.getElementById('lightboxImg').src   = it.src;
+  document.getElementById('lightboxTag').textContent   = it.tag;
+  document.getElementById('lightboxTitle').textContent = it.title;
+  document.getElementById('lightboxDesc').textContent  = it.desc;
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeLightboxOutside(e) { if (e.target.id === 'lightbox') closeLightbox(); }
+function lightboxNext() { currentIndex = (currentIndex + 1) % items.length; updateLightbox(); }
+function lightboxPrev() { currentIndex = (currentIndex - 1 + items.length) % items.length; updateLightbox(); }
+document.addEventListener('keydown', function(e) {
+  if (document.getElementById('lightbox').classList.contains('open')) {
+    if (e.key === 'Escape')      closeLightbox();
+    if (e.key === 'ArrowRight')  lightboxNext();
+    if (e.key === 'ArrowLeft')   lightboxPrev();
+  }
+});
+
+function filterGallery(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  document.querySelectorAll('#galleryGrid .gallery-item').forEach(function(item) {
+    item.style.display = (cat === 'all' || item.dataset.cat === cat) ? 'block' : 'none';
+  });
+  // also handle featured items if needed
+  document.querySelectorAll('.gallery-featured-grid .gallery-item').forEach(function(item) {
+    item.style.display = (cat === 'all' || item.dataset.cat === cat) ? 'block' : 'none';
+  });
+}
+
+var hbg = document.querySelector('.hamburger');
+var nl  = document.querySelector('.nav-links');
+var mopen = false;
+if (hbg) {
+  hbg.addEventListener('click', function() {
+    mopen = !mopen;
+    if (mopen) {
+      nl.style.cssText = 'display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:#fff;padding:1rem 2rem 1.5rem;border-bottom:1px solid #dde0ec;box-shadow:0 8px 24px rgba(27,44,107,0.1);z-index:99;';
+    } else {
+      nl.style.display = 'none';
+    }
+  });
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var href = this.getAttribute('href');
+    if (!href || href === '#') return;
+    var t = document.querySelector(href);
+    if (t) { e.preventDefault(); t.scrollIntoView({behavior:'smooth', block:'start'}); if (window.innerWidth <= 600) { nl.style.display = 'none'; mopen = false; } }
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="images/img001.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/img002.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/img003.png">
+<title>Philippine Global Media Group | Inform. Connect. Uplift.</title>
+<meta name="description" content="Philippine Global Media Group (PGMG) is a 501(c)(3) nonprofit uniting Filipino journalists across the Global Diaspora. Meet our officers, see upcoming events, and learn about the Manny Ilagan Memorial Scholarship Program.">
+<link rel="canonical" href="https://pgmg.org/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Philippine Global Media Group | Inform. Connect. Uplift.">
+<meta property="og:description" content="Philippine Global Media Group (PGMG) is a 501(c)(3) nonprofit uniting Filipino journalists across the Global Diaspora. Meet our officers, see upcoming events, and learn about the Manny Ilagan Memorial Scholarship Program.">
+<meta property="og:url" content="https://pgmg.org/">
+<meta property="og:image" content="https://pgmg.org/images/img004.png">
+<meta property="og:site_name" content="Philippine Global Media Group">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Philippine Global Media Group | Inform. Connect. Uplift.">
+<meta name="twitter:description" content="Philippine Global Media Group (PGMG) is a 501(c)(3) nonprofit uniting Filipino journalists across the Global Diaspora. Meet our officers, see upcoming events, and learn about the Manny Ilagan Memorial Scholarship Program.">
+<meta name="twitter:image" content="https://pgmg.org/images/img004.png">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1B2C6B; --navy-dark: #0F1A45;
+  --red: #CC1B1B; --red-dark: #A01414;
+  --gold: #F5C518; --gold-dark: #D4A800;
+  --white: #FFFFFF; --offwhite: #F5F6FA;
+  --gray: #E8EAF2; --text: #0F1A45; --muted: #5A6080;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Arial Black',Arial,sans-serif; color:var(--text); background:var(--white); font-size:16px; line-height:1.6; }
+p,li,label,input,textarea,select,.footer-desc,.section-body,.hero-desc,.event-desc,.focus-item p,.platform-card p,.value-card p,.team-card p,.involve-card p,.contact-item a,.contact-item p,.footer-bottom,.topbar { font-family:Arial,Helvetica,sans-serif; font-weight:400; }
+h1,h2,h3,h4 { font-family:'Arial Black',Arial,sans-serif; font-weight:400; }
+
+/* TOPBAR */
+.topbar { background:var(--navy-dark); color:rgba(255,255,255,0.8); font-size:12px; letter-spacing:.04em; padding:7px 0; text-align:center; border-bottom:3px solid var(--gold); }
+.topbar a { color:var(--gold); text-decoration:none; }
+
+/* NAV */
+nav { position:sticky; top:0; z-index:100; background:var(--white); border-bottom:1px solid #dde0ec; box-shadow:0 2px 16px rgba(27,44,107,.1); }
+.nav-inner { max-width:1200px; margin:0 auto; padding:0 2rem; display:flex; align-items:center; justify-content:space-between; height:76px; }
+.nav-logo { display:flex; align-items:center; text-decoration:none; }
+.nav-logo img { height:68px; width:auto; max-width:260px; }
+.nav-links { display:flex; align-items:center; gap:1.2rem; list-style:none; }
+.nav-links a { font-family:'Arial Black',Arial,sans-serif; font-size:12px; font-weight:400; letter-spacing:.06em; text-transform:uppercase; color:var(--navy); text-decoration:none; transition:color .2s; padding-bottom:3px;white-space:nowrap; border-bottom:2px solid transparent; }
+.nav-links a:hover { color:var(--red); border-bottom-color:var(--red); }
+.nav-cta { background:var(--red) !important; color:var(--white) !important; padding:9px 22px !important; border-radius:3px !important; border-bottom:none !important; }
+.nav-cta:hover { background:var(--red-dark) !important; }
+.hamburger { display:none; cursor:pointer; background:none; border:none; padding:4px; }
+.hamburger span { display:block; width:24px; height:2px; background:var(--navy); border-radius:2px; margin:5px 0; }
+
+/* HERO */
+.hero {
+  background: var(--navy-dark);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  min-height: 88vh;
+  display: flex;
+  align-items: stretch;
+}
+.hero-flag { position:absolute; top:0; left:0; right:0; height:5px; display:flex; z-index:10; }
+.hero-flag span:nth-child(1) { flex:1; background:var(--navy); }
+.hero-flag span:nth-child(2) { flex:1; background:var(--red); }
+.hero-flag span:nth-child(3) { flex:2; background:var(--gold); }
+
+/* LEFT text panel */
+.hero-left {
+  position: relative;
+  z-index: 5;
+  width: 50%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem 3rem 6rem 3rem;
+  max-width: 600px;
+}
+
+/* RIGHT slideshow */
+.hero-slideshow {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  min-height: 88vh;
+}
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.hero-slide.active { opacity: 1; }
+
+/* The key gradient — fades the photo into navy on the left */
+.hero-slide-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    var(--navy-dark) 0%,
+    rgba(15,26,69,0.6) 28%,
+    rgba(15,26,69,0.1) 55%,
+    transparent 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Dot indicators */
+.hero-dots {
+  position: absolute;
+  bottom: 2rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 8px;
+  z-index: 5;
+}
+.hero-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  border: none;
+}
+.hero-dot.active {
+  background: var(--gold);
+  transform: scale(1.25);
+}
+
+.hero-kicker {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(245,197,24,.15); border: 1px solid rgba(245,197,24,.35);
+  color: var(--gold); font-size: 11px; font-family:'Arial Black',Arial,sans-serif;
+  letter-spacing:.18em; text-transform:uppercase;
+  padding: 6px 14px; border-radius: 2px; margin-bottom: 1.5rem;
+  width: fit-content;
+}
+.hero-kicker::before { content:''; width:6px; height:6px; background:var(--gold); border-radius:50%; }
+.hero h1 {
+  font-size: clamp(2.4rem, 3.8vw, 4rem);
+  line-height: 1.05; margin-bottom: 1.5rem;
+  letter-spacing: .01em; text-transform: uppercase;
+}
+.hero h1 em { font-style:normal; color:var(--gold); }
+.hero h1 .red { color: #E83030; }
+.hero-desc {
+  font-size: 1rem; line-height: 1.8;
+  color: rgba(255,255,255,.75);
+  margin-bottom: 2.5rem; max-width: 460px;
+}
+.hero-actions { display:flex; gap:1rem; flex-wrap:wrap; }
+
+/* responsive */
+@media (max-width:900px) {
+  .hero { flex-direction: column; min-height: auto; }
+  .hero-left { width: 100%; max-width: 100%; padding: 4rem 2rem 2rem; }
+  .hero-slideshow { min-height: 320px; width: 100%; }
+  .hero-slide-fade {
+    background: linear-gradient(
+      to bottom,
+      var(--navy-dark) 0%,
+      rgba(15,26,69,0.4) 20%,
+      transparent 50%
+    );
+  }
+}
+@media (max-width:600px) {
+  .hero-left { padding: 3rem 1.5rem 2rem; }
+  .hero-slideshow { min-height: 260px; }
+  .hero h1 { font-size: 2.2rem; }
+  .hero-actions { flex-direction: column; }
+  .btn-red,.btn-gold,.btn-outline-white { text-align:center; }
+}
+
+/* MISSION BAND */
+.mission-band { display:flex; }
+.mission-band-left { background:var(--navy-dark); padding:1rem 2rem; display:flex; align-items:center; flex-shrink:0; }
+.mission-band-left span { color:var(--gold); font-family:'Arial Black',Arial,sans-serif; font-size:12px; letter-spacing:.12em; text-transform:uppercase; }
+.mission-pillars { display:flex; align-items:center; flex:1; background:var(--red); overflow:hidden; }
+.mission-pillar { flex:1; text-align:center; padding:.9rem 1rem; color:var(--white); font-size:12px; letter-spacing:.07em; text-transform:uppercase; border-right:1px solid rgba(255,255,255,.2); }
+.mission-pillar:last-child { border-right:none; }
+
+/* SECTIONS */
+section { padding:5rem 0; }
+.container { max-width:1200px; margin:0 auto; padding:0 2rem; }
+.section-label { font-family:'Arial Black',Arial,sans-serif; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--red); margin-bottom:.5rem; display:block; }
+.section-title { font-size:clamp(1.9rem,3vw,2.7rem); line-height:1.1; color:var(--navy); margin-bottom:1rem; text-transform:uppercase; letter-spacing:.02em; }
+.section-body { font-size:1rem; line-height:1.8; color:var(--muted); max-width:620px; }
+
+/* PHOTO STRIP */
+.photo-strip { display:grid; grid-template-columns:repeat(4,1fr); height:280px; overflow:hidden; }
+.photo-strip-item { background-size:cover; background-position:center; position:relative; overflow:hidden; }
+.photo-strip-item::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,transparent 50%,rgba(15,26,69,.7) 100%); }
+.photo-strip-item span { position:absolute; bottom:12px; left:12px; z-index:2; color:var(--white); font-family:'Arial Black',Arial,sans-serif; font-size:11px; letter-spacing:.1em; text-transform:uppercase; background:rgba(204,27,27,.85); padding:3px 10px; border-radius:2px; }
+
+/* ABOUT */
+.about { background:var(--offwhite); }
+.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
+.about-values { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-top:2rem; }
+.value-card { background:var(--white); border:1px solid var(--gray); border-radius:6px; padding:1.5rem; border-top:3px solid var(--gold); }
+.value-icon { width:40px; height:40px; border-radius:4px; display:flex; align-items:center; justify-content:center; margin-bottom:.9rem; }
+.value-icon.red { background:var(--red); } .value-icon.navy { background:var(--navy); } .value-icon.gold { background:var(--gold-dark); } .value-icon.dark { background:var(--navy-dark); }
+.value-icon svg { width:20px; height:20px; fill:var(--white); }
+.value-card h4 { font-size:13px; color:var(--navy); margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em; }
+.value-card p { font-size:13px; color:var(--muted); line-height:1.6; }
+.about-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:2rem; }
+.stat { text-align:center; padding:1.4rem 1rem; border:1px solid var(--gray); border-radius:6px; background:var(--white); border-top:3px solid var(--red); }
+.stat-num { font-family:'Arial Black',Arial,sans-serif; font-size:2rem; color:var(--navy); display:block; line-height:1; margin-bottom:6px; }
+.stat-label { font-family:Arial,sans-serif; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+.about-right .section-body { max-width:100%; }
+.about-photo { width:100%; border-radius:8px; overflow:hidden; margin-top:2rem; height:220px; background-size:cover; background-position:center; box-shadow:0 8px 30px rgba(27,44,107,.15); }
+
+/* PLATFORMS */
+.platforms { background:var(--navy); color:var(--white); }
+.platforms .section-label { color:var(--gold); }
+.platforms .section-title { color:var(--white); }
+.platforms .section-body { color:rgba(255,255,255,.6); }
+.platforms-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; margin-top:3rem; }
+.platform-card { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); border-top:3px solid var(--red); border-radius:8px; overflow:hidden; transition:transform .2s,border-top-color .2s; }
+.platform-card:hover { transform:translateY(-3px); border-top-color:var(--gold); }
+.platform-card-img { width:100%; height:140px; background-size:cover; background-position:center; }
+.platform-card-body { padding:1.5rem; }
+.platform-icon { width:44px; height:44px; background:rgba(245,197,24,.15); border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:1rem; border:1px solid rgba(245,197,24,.3); }
+.platform-icon svg { width:22px; height:22px; fill:var(--gold); }
+.platform-card h3 { font-size:1rem; color:var(--white); margin-bottom:.5rem; text-transform:uppercase; letter-spacing:.04em; }
+.platform-card p { font-size:13px; color:rgba(255,255,255,.5); line-height:1.65; }
+
+/* FOCUS */
+.focus { background:var(--white); }
+.focus-list { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-top:3rem; }
+.focus-item { display:flex; gap:1rem; padding:1.5rem; background:var(--offwhite); border-radius:6px; border-left:4px solid var(--navy); transition:transform .2s,box-shadow .2s; }
+.focus-item:nth-child(even) { border-left-color:var(--red); }
+.focus-item:hover { transform:translateY(-2px); box-shadow:0 6px 20px rgba(27,44,107,.1); }
+.focus-num { font-family:'Arial Black',Arial,sans-serif; font-size:1.5rem; color:var(--gold-dark); line-height:1; flex-shrink:0; }
+.focus-item h4 { font-size:13px; color:var(--navy); margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em; }
+.focus-item p { font-size:13px; color:var(--muted); line-height:1.6; }
+
+/* EVENTS */
+.event-section { background:var(--offwhite); }
+.event-card { background:var(--white); border-radius:12px; overflow:hidden; display:grid; grid-template-columns:200px 1fr; max-width:920px; margin:3rem auto 0; box-shadow:0 16px 60px rgba(27,44,107,.13); border:1px solid var(--gray); }
+.event-date-panel { background:var(--navy-dark); padding:2.5rem 1.5rem; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:.4rem; border-right:4px solid var(--gold); }
+.event-month { font-family:'Arial Black',Arial,sans-serif; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.6); }
+.event-day { font-family:'Arial Black',Arial,sans-serif; font-size:4.2rem; color:var(--gold); line-height:1; }
+.event-year { font-family:Arial,sans-serif; font-size:13px; color:rgba(255,255,255,.5); letter-spacing:.08em; }
+.event-dow { font-family:'Arial Black',Arial,sans-serif; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:#E83030; margin-top:4px; }
+.event-details { padding:2.5rem; }
+.event-tag { display:inline-block; background:rgba(204,27,27,.08); border:1px solid rgba(204,27,27,.25); color:var(--red); font-family:'Arial Black',Arial,sans-serif; font-size:10px; letter-spacing:.14em; text-transform:uppercase; padding:4px 12px; border-radius:2px; margin-bottom:1rem; }
+.event-title { font-size:1.6rem; line-height:1.2; margin-bottom:1.25rem; color:var(--navy-dark); text-transform:uppercase; letter-spacing:.02em; }
+.event-meta { display:flex; flex-direction:column; gap:8px; margin-bottom:1.5rem; }
+.event-meta-item { display:flex; align-items:center; gap:10px; font-size:14px; color:var(--muted); }
+.event-meta-item svg { width:16px; height:16px; flex-shrink:0; }
+.event-meta-item svg.red-icon { fill:var(--red); } .event-meta-item svg.navy-icon { fill:var(--navy); }
+.event-desc { font-size:14px; line-height:1.8; color:var(--muted); margin-bottom:1.75rem; padding-left:1rem; border-left:3px solid var(--gold); }
+
+/* COMMUNITY */
+.community { background:var(--white); }
+.team-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; margin-top:3rem; }
+.team-card { border:1px solid var(--gray); border-radius:8px; overflow:hidden; transition:box-shadow .2s,transform .2s; border-top:3px solid var(--navy); }
+.team-card:hover { box-shadow:0 8px 24px rgba(27,44,107,.1); transform:translateY(-2px); }
+.team-card-img { width:100%; height:160px; background-size:cover; background-position:center; }
+.team-card-body { padding:1.25rem; text-align:center; }
+.team-avatar { width:64px; height:64px; border-radius:50%; margin:-32px auto .75rem; display:flex; align-items:center; justify-content:center; font-family:'Arial Black',Arial,sans-serif; font-size:1.2rem; color:var(--white); border:3px solid var(--white); position:relative; }
+.team-avatar.red { background:var(--red); } .team-avatar.navy { background:var(--navy); } .team-avatar.dark { background:var(--navy-dark); } .team-avatar.gold { background:var(--gold-dark); color:var(--navy-dark); }
+.team-card h4 { font-size:13px; color:var(--navy); margin-bottom:3px; text-transform:uppercase; letter-spacing:.03em; }
+.team-card .role { font-family:'Arial Black',Arial,sans-serif; font-size:10px; color:var(--red); letter-spacing:.1em; text-transform:uppercase; margin-bottom:6px; }
+.team-card p { font-size:12px; color:var(--muted); line-height:1.5; }
+
+/* INVOLVEMENT */
+.involvement { background:var(--navy-dark); color:var(--white); }
+.involvement .section-label { color:var(--gold); }
+.involvement .section-title { color:var(--white); }
+.involvement .section-body { color:rgba(255,255,255,.6); }
+.involve-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:3rem; }
+.involve-card { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); border-top:3px solid var(--gold); border-radius:8px; overflow:hidden; transition:background .2s; }
+.involve-card:hover { background:rgba(255,255,255,.09); }
+.involve-card-img { width:100%; height:140px; background-size:cover; background-position:center; }
+.involve-card-body { padding:1.75rem; }
+.involve-card h3 { font-size:1.05rem; color:var(--white); margin-bottom:.75rem; text-transform:uppercase; letter-spacing:.04em; }
+.involve-card p { font-size:13px; color:rgba(255,255,255,.55); line-height:1.65; margin-bottom:1.25rem; }
+.link-gold { font-family:'Arial Black',Arial,sans-serif; color:var(--gold); font-size:13px; text-decoration:none; letter-spacing:.06em; display:inline-flex; align-items:center; gap:6px; }
+.link-gold::after { content:''; }
+.link-gold:hover { color:var(--white); }
+
+/* CONTACT */
+.contact { background:var(--offwhite); }
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; margin-top:3rem; }
+.contact-info { display:flex; flex-direction:column; gap:1.5rem; }
+.contact-item { display:flex; gap:1rem; align-items:flex-start; }
+.contact-icon { width:44px; height:44px; border-radius:4px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.contact-icon.red { background:var(--red); } .contact-icon.navy { background:var(--navy); } .contact-icon.dark { background:var(--navy-dark); }
+.contact-icon svg { width:20px; height:20px; fill:var(--white); }
+.contact-item h4 { font-family:'Arial Black',Arial,sans-serif; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+.contact-item a,.contact-item p { font-size:15px; color:var(--navy); font-weight:600; text-decoration:none; }
+.contact-item a:hover { color:var(--red); }
+.contact-form { background:var(--white); border:1px solid var(--gray); border-radius:8px; padding:2.5rem; border-top:4px solid var(--navy); }
+.contact-form h3 { font-size:1.3rem; color:var(--navy); margin-bottom:1.5rem; text-transform:uppercase; letter-spacing:.04em; }
+.form-group { margin-bottom:1.2rem; }
+.form-group label { display:block; font-family:'Arial Black',Arial,sans-serif; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:6px; }
+.form-group input,.form-group textarea,.form-group select { width:100%; padding:10px 14px; border:1.5px solid var(--gray); border-radius:4px; font-family:Arial,sans-serif; font-size:14px; color:var(--text); background:var(--white); outline:none; transition:border-color .2s; }
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus { border-color:var(--navy); }
+.form-group textarea { resize:vertical; min-height:100px; }
+.btn-submit { width:100%; background:var(--red); color:var(--white); font-family:'Arial Black',Arial,sans-serif; font-size:13px; letter-spacing:.1em; text-transform:uppercase; padding:13px; border:none; border-radius:4px; cursor:pointer; transition:background .2s; margin-top:.5rem; }
+.btn-submit:hover { background:var(--red-dark); }
+
+/* FOOTER */
+footer { background:var(--white); color:var(--muted); border-top:1px solid var(--gray); padding:4rem 0 0; }
+.footer-flag { height:4px; background:linear-gradient(90deg,var(--navy-dark) 33%,var(--red) 33% 66%,var(--gold) 66%); }
+.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; max-width:1200px; margin:0 auto; padding:3rem 2rem; border-bottom:1px solid var(--gray); }
+.footer-logo img { height:72px; width:auto; max-width:260px; margin-bottom:1rem; }
+.footer-desc { font-size:14px; line-height:1.75; color:var(--muted); margin-bottom:1.25rem; }
+.footer-social { display:flex; gap:10px; }
+.social-btn { width:36px; height:36px; background:var(--offwhite); border:1px solid var(--gray); border-radius:4px; display:flex; align-items:center; justify-content:center; text-decoration:none; transition:background .2s,border-color .2s; }
+.social-btn:hover { background:var(--navy); border-color:var(--navy); }
+.social-btn:hover svg { fill:var(--white); }
+.social-btn svg { width:16px; height:16px; fill:var(--navy); transition:fill .2s; }
+.nonprofit-badge { display:inline-flex; align-items:center; gap:6px; background:rgba(27,44,107,.07); border:1px solid rgba(27,44,107,.15); color:var(--navy); font-family:'Arial Black',Arial,sans-serif; font-size:10px; padding:4px 12px; border-radius:100px; letter-spacing:.1em; }
+.footer-col h4 { font-family:'Arial Black',Arial,sans-serif; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--navy); margin-bottom:1rem; }
+.footer-col ul { list-style:none; }
+.footer-col ul li { margin-bottom:8px; }
+.footer-col ul a { font-size:14px; color:var(--muted); text-decoration:none; transition:color .2s; }
+.footer-col ul a:hover { color:var(--red); }
+.footer-bottom { max-width:1200px; margin:0 auto; padding:1.25rem 2rem; display:flex; justify-content:space-between; align-items:center; font-size:12px; flex-wrap:wrap; gap:1rem; }
+.footer-bottom a { color:var(--muted); text-decoration:none; }
+.footer-bottom a:hover { color:var(--red); }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
+.hero-kicker { animation:fadeUp .5s ease .1s both; }
+.hero h1 { animation:fadeUp .5s ease .2s both; }
+.hero-desc { animation:fadeUp .5s ease .3s both; }
+.hero-actions { animation:fadeUp .5s ease .4s both; }
+.hero-right { animation:fadeUp .5s ease .45s both; }
+
+/* RESPONSIVE */
+@media (max-width:900px) {
+  .hero-content,.about-grid,.contact-grid { grid-template-columns:1fr; }
+  .platforms-grid,.focus-list,.team-grid { grid-template-columns:1fr 1fr; }
+  .involve-grid { grid-template-columns:1fr; }
+  .footer-grid { grid-template-columns:1fr 1fr; }
+  .event-card { grid-template-columns:1fr; }
+  .event-date-panel { flex-direction:row; padding:1.5rem; justify-content:center; gap:1.5rem; border-right:none; border-bottom:4px solid var(--gold); }
+  .photo-strip { grid-template-columns:1fr 1fr; height:auto; }
+  .mission-band { flex-direction:column; }
+  .mission-pillars { flex-wrap:wrap; }
+  .mission-pillar { flex:0 1 48%; border-bottom:1px solid rgba(255,255,255,.2); }
+}
+@media (max-width:1100px) {
+  .nav-links { display:none; }
+  .hamburger { display:block; }
+  .about-values { grid-template-columns:1fr; }
+  .platforms-grid,.focus-list { grid-template-columns:1fr; }
+  .team-grid { grid-template-columns:1fr 1fr; }
+  .footer-grid { grid-template-columns:1fr; }
+  .photo-strip { grid-template-columns:1fr; height:auto; }
+  .hero-actions { flex-direction:column; }
+  .btn-red,.btn-gold,.btn-outline-white { text-align:center; }
+}
+
+.profile-card { cursor:pointer; transition:box-shadow .2s ease, transform .2s ease; }
+.profile-card:hover { box-shadow:0 12px 34px rgba(27,44,107,.16); transform:translateY(-2px); }
+.profile-view-more { font-family:'Arial Black',Arial,sans-serif; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--red); margin-top:.85rem; display:inline-block; }
+.profile-card:hover .profile-view-more { text-decoration:underline; }
+.profile-modal { display:none; position:fixed; inset:0; background:rgba(10,15,40,.92); z-index:1000; align-items:center; justify-content:center; padding:2rem; }
+.profile-modal.open { display:flex; }
+.profile-modal-content { position:relative; max-width:640px; width:100%; max-height:88vh; overflow-y:auto; background:var(--white); border-radius:10px; }
+.profile-modal-photo { width:100%; max-height:420px; background:var(--navy-dark); display:flex; align-items:center; justify-content:center; overflow:hidden; border-radius:10px 10px 0 0; }
+.profile-modal-photo img { width:100%; max-height:420px; object-fit:contain; display:block; }
+.profile-modal-body { padding:1.75rem 2rem 2rem; }
+.profile-modal-role { font-family:'Arial Black',Arial,sans-serif; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--red); margin-bottom:.35rem; }
+.profile-modal-name { font-family:'Arial Black',Arial,sans-serif; font-size:1.4rem; color:var(--navy); text-transform:uppercase; margin-bottom:1rem; }
+.profile-modal-bio p { font-family:Arial,sans-serif; font-size:14px; color:var(--muted); line-height:1.8; margin-bottom:1rem; }
+.profile-modal-bio p:last-child { margin-bottom:0; }
+.profile-modal-bio ul { margin:0 0 1rem 1.15rem; padding:0; }
+.profile-modal-bio ul li { font-family:Arial,sans-serif; font-size:14px; color:var(--muted); line-height:1.7; margin-bottom:.55rem; }
+.profile-modal-bio ul li:last-child { margin-bottom:0; }
+.profile-modal-bio h5 { font-family:'Arial Black',Arial,sans-serif; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--red); margin:1.25rem 0 .6rem; }
+.profile-modal-bio .bio-empty { font-family:Arial,sans-serif; font-size:13.5px; color:var(--muted); font-style:italic; }
+.avatar-placeholder { display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%); }
+.avatar-placeholder span { font-family:'Arial Black',Arial,sans-serif; color:rgba(255,255,255,.85); }
+.profile-modal-photo.placeholder { background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%); }
+.profile-modal-photo.placeholder span { font-family:'Arial Black',Arial,sans-serif; font-size:64px; color:rgba(255,255,255,.85); }
+.profile-modal-close { position:absolute; top:14px; right:14px; width:32px; height:32px; border-radius:50%; background:rgba(0,0,0,.45); color:var(--white); border:none; font-size:18px; line-height:32px; text-align:center; cursor:pointer; z-index:2; }
+.profile-modal-close:hover { background:rgba(0,0,0,.7); }
+@media(max-width:600px){ .profile-modal-photo{max-height:300px;} .profile-modal-photo img{max-height:300px;} }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  Philippine Global Media Group &nbsp; | &nbsp; 501(c)(3) Nonprofit &nbsp; | &nbsp; <a href="mailto:info@pgmg.org">info@pgmg.org</a> &nbsp; | &nbsp; <a href="https://pgmg.org">pgmg.org</a> &nbsp;|&nbsp; <a href="https://www.facebook.com/profile.php?id=61560143865748" target="_blank">Follow us on Facebook</a>
+</div>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="https://pgmg.org" class="nav-logo" style="padding:4px 0;">
+      <img src="images/img004.png" alt="Philippine Global Media Group">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="/history/">History</a></li>
+      <li><a href="#officers">Officers</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="/news/">News</a></li>
+      <li><a href="/gallery/">Gallery</a></li>
+      <li><a href="/scholarship/">Scholarship</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Get Involved</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-flag"><span></span><span></span><span></span></div>
+
+  <!-- LEFT: text content -->
+  <div class="hero-left">
+    <div class="hero-kicker">501(c)(3) Nonprofit Media Organization</div>
+    <h1>THE VOICE OF <em>FILIPINO</em> COMMUNITIES <span class="red">WORLDWIDE</span></h1>
+    <p class="hero-desc">Philippine Global Media Group bridges communities through authentic journalism, cultural storytelling, and civic engagement — amplifying Filipino voices across print, digital, and multimedia platforms.</p>
+    <div class="hero-actions">
+      <a href="#about" class="btn-red">Our Mission</a>
+      <a href="#events" class="btn-gold">Upcoming Events</a>
+      <a href="#contact" class="btn-outline-white">Get Involved</a>
+    </div>
+  </div>
+
+  <!-- RIGHT: slideshow with gradient fade -->
+  <div class="hero-slideshow">
+    <div class="hero-slide active" style="background-image:url('images/img005.png')"></div>
+    <div class="hero-slide" style="background-image:url('images/img006.png')"></div>
+    <div class="hero-slide" style="background-image:url('images/img007.png')"></div>
+    <div class="hero-slide" style="background-image:url('images/img008.png')"></div>
+    <div class="hero-slide" style="background-image:url('images/img009.png')"></div>
+    <!-- gradient overlay that fades left into navy -->
+    <div class="hero-slide-fade"></div>
+    <div class="hero-slide" style="background-image:url('images/img010.png')"></div>
+    <div class="hero-slide" style="background-image:url('images/img011.png')"></div>
+    <!-- dot indicators -->
+    <div class="hero-dots">
+      <span class="hero-dot active" onclick="goSlide(0)"></span>
+      <span class="hero-dot" onclick="goSlide(1)"></span>
+      <span class="hero-dot" onclick="goSlide(2)"></span>
+      <span class="hero-dot" onclick="goSlide(3)"></span>
+      <span class="hero-dot" onclick="goSlide(4)"></span>
+      <span class="hero-dot" onclick="goSlide(5)"></span>
+      <span class="hero-dot" onclick="goSlide(6)"></span>
+    </div>
+  </div>
+
+</section>
+
+<div class="mission-band">
+  <div class="mission-band-left"><span>Our Mission</span></div>
+  <div class="mission-pillars">
+    <div class="mission-pillar">Inform</div>
+    <div class="mission-pillar">Connect</div>
+    <div class="mission-pillar">Uplift</div>
+    <div class="mission-pillar">Celebrate Filipino Heritage</div>
+    <div class="mission-pillar">Global Filipino Stories</div>
+  </div>
+</div>
+
+<div class="photo-strip">
+  <div class="photo-strip-item" style="background-image:url('images/img012.jpg')"><span>Independence Day</span></div>
+  <div class="photo-strip-item" style="background-image:url('images/img013.jpg')"><span>City of Carson</span></div>
+  <div class="photo-strip-item" style="background-image:url('images/img014.jpg')"><span>PH Consulate</span></div>
+  <div class="photo-strip-item" style="background-image:url('images/img015.jpg')"><span>Independence Day</span></div>
+</div>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <span class="section-label">Who We Are</span>
+        <h2 class="section-title">A Nonprofit Dedicated to Filipino Stories</h2>
+        <div class="about-values">
+          <div class="value-card"><div class="value-icon red"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h4>Community Journalism</h4><p>Reporting stories that matter to Filipino and Filipino-American communities.</p></div>
+          <div class="value-card"><div class="value-icon navy"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2"/></svg></div><h4>Cultural Storytelling</h4><p>Preserving heritage and amplifying Filipino voices worldwide.</p></div>
+          <div class="value-card"><div class="value-icon gold"><svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg></div><h4>Civic Engagement</h4><p>Inspiring participation in community life and democratic processes.</p></div>
+          <div class="value-card"><div class="value-icon dark"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><h4>Truth &amp; Integrity</h4><p>Committed to accurate, fair, and responsible media practices.</p></div>
+        </div>
+      </div>
+      <div>
+        <span class="section-label">Our Purpose</span>
+        <h2 class="section-title">Media as a Bridge Between Worlds</h2>
+        <p class="section-body">Philippine Global Media Group is a nonprofit media organization dedicated to community journalism, cultural storytelling, public education, and civic engagement. We bring together media professionals, correspondents, writers, community leaders, and advocates committed to sharing stories that inform, inspire, and uplift.</p>
+        <p class="section-body" style="margin-top:1rem;">Through print, digital, online, and multimedia platforms, we highlight community events, cultural heritage, business achievements, nonprofit initiatives, public service programs, and stories of leadership and impact.</p>
+        <p class="section-body" style="margin-top:1rem;">Our mission is to use media as a bridge — connecting people, preserving culture, promoting truth, and giving visibility to the voices, stories, and contributions of Filipinos around the world.</p>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-num">501c3</span><span class="stat-label">Nonprofit</span></div>
+          <div class="stat"><span class="stat-num">4+</span><span class="stat-label">Platforms</span></div>
+          <div class="stat"><span class="stat-num">Global</span><span class="stat-label">Reach</span></div>
+        </div>
+        <div class="about-photo" style="background-image:url('images/img008.png')"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="platforms" id="platforms">
+  <div class="container">
+    <span class="section-label">How We Work</span>
+    <h2 class="section-title">Reaching Communities Across Every Platform</h2>
+    <p class="section-body">Our multimedia approach ensures Filipino stories reach audiences wherever they are — from print to digital, online to broadcast.</p>
+    <div class="platforms-grid">
+      <div class="platform-card"><div class="platform-card-img" style="background-image:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&auto=format&fit=crop&q=60')"></div><div class="platform-card-body"><div class="platform-icon"><svg viewBox="0 0 24 24"><path d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2"/></svg></div><h3>Print Media</h3><p>Community newspapers delivering in-depth stories and local coverage to Filipino households.</p></div></div>
+      <div class="platform-card"><div class="platform-card-img" style="background-image:url('https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=400&auto=format&fit=crop&q=60')"></div><div class="platform-card-body"><div class="platform-icon"><svg viewBox="0 0 24 24"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div><h3>Digital Media</h3><p>Online news, social platforms, and digital publications reaching global Filipino audiences.</p></div></div>
+      <div class="platform-card"><div class="platform-card-img" style="background-image:url('https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&auto=format&fit=crop&q=60')"></div><div class="platform-card-body"><div class="platform-icon"><svg viewBox="0 0 24 24"><path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3>Multimedia &amp; Video</h3><p>Video storytelling and documentary features that bring Filipino experiences to life.</p></div></div>
+      <div class="platform-card"><div class="platform-card-img" style="background-image:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&auto=format&fit=crop&q=60')"></div><div class="platform-card-body"><div class="platform-icon"><svg viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></div><h3>Community Events</h3><p>Forums, cultural celebrations, town halls, and networking events that build civic pride.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="focus" id="focus">
+  <div class="container">
+    <span class="section-label">What We Cover</span>
+    <h2 class="section-title">Stories That Shape Our Community</h2>
+    <p class="section-body">We give voice to the full breadth of Filipino life — from cultural celebrations to business milestones, from nonprofit impact to public service leadership.</p>
+    <div class="focus-list">
+      <div class="focus-item"><span class="focus-num">01</span><div><h4>Community Events &amp; Celebrations</h4><p>Coverage of festivals, cultural events, and milestones that bring Filipino communities together.</p></div></div>
+      <div class="focus-item"><span class="focus-num">02</span><div><h4>Cultural Heritage &amp; Identity</h4><p>Stories preserving Filipino traditions, history, language, and cultural legacy for future generations.</p></div></div>
+      <div class="focus-item"><span class="focus-num">03</span><div><h4>Business &amp; Entrepreneurship</h4><p>Spotlighting Filipino business leaders, innovators, and entrepreneurs making their mark.</p></div></div>
+      <div class="focus-item"><span class="focus-num">04</span><div><h4>Nonprofit &amp; Community Initiatives</h4><p>Amplifying the work of organizations serving the Filipino and Filipino-American community.</p></div></div>
+      <div class="focus-item"><span class="focus-num">05</span><div><h4>Public Service &amp; Leadership</h4><p>Recognizing elected officials, community leaders, and public servants driving positive change.</p></div></div>
+      <div class="focus-item"><span class="focus-num">06</span><div><h4>Health, Education &amp; Social Issues</h4><p>Informing communities about health resources, education opportunities, and social equity.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="event-section" id="events">
+  <div class="container">
+    <div style="text-align:center">
+      <span class="section-label" style="display:block;text-align:center">Upcoming Events</span>
+      <h2 class="section-title" style="text-align:center">Join Us — Next Event</h2>
+    </div>
+
+    <div style="max-width:1100px;margin:3rem auto 0;display:grid;grid-template-columns:1fr 300px;gap:2rem;align-items:start;">
+
+      <!-- EVENT CARD -->
+      <div class="event-card" style="margin:0;max-width:100%;">
+        <div class="event-date-panel">
+          <div>
+            <div class="event-month">August</div>
+            <div class="event-day">8</div>
+            <div class="event-year">2026</div>
+            <div class="event-dow">6:00 PM</div>
+          </div>
+        </div>
+        <div class="event-details">
+          <div class="event-tag">Upcoming Event</div>
+          <h3 class="event-title">Induction of Officers</h3>
+          <div class="event-meta">
+            <div class="event-meta-item">
+              <svg viewBox="0 0 24 24" style="fill:var(--gold-dark);width:16px;height:16px;flex-shrink:0"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              <span>August 8, 2026 at 6:00 PM</span>
+            </div>
+            <div class="event-meta-item">
+              <svg viewBox="0 0 24 24" class="red-icon"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>Cerritos Sheraton, 12725 Center Court Dr. South, Cerritos, CA 90703</span>
+            </div>
+            <div class="event-meta-item">
+              <svg viewBox="0 0 24 24" class="navy-icon"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span>info@pgmg.org</span>
+            </div>
+          </div>
+          <div class="event-desc">An evening of leadership, service and commitment to our community. Proceeds benefit the <a href="/scholarship/" style="color:var(--gold);text-decoration:underline;">Manny Ilagan Memorial Scholarship Program</a> for Filipino journalism and mass communication students. Together, we inspire change. Together, we make a difference.</div>
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+            <div style="background:var(--navy-dark);border-radius:4px;padding:.7rem 1.5rem;font-family:'Arial Black',Arial,sans-serif;font-size:13px;color:var(--white);letter-spacing:.06em;">TICKET: <span style="color:var(--gold);font-size:1.3rem;">$110</span></div>
+            <div style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);max-width:220px;line-height:1.5;"><a href="/scholarship/" style="color:var(--navy);text-decoration:underline;">Manny Ilagan Memorial Scholarship Program</a></div>
+          </div>
+          <a href="#contact" class="btn-red">Reserve Your Seat</a>
+        </div>
+      </div>
+
+      <!-- FLYER IMAGE -->
+      <div style="border-radius:8px;overflow:hidden;box-shadow:0 8px 30px rgba(27,44,107,.2);position:sticky;top:100px;">
+        <img src="images/img016.jpg" alt="PGMG Induction of Officers Flyer" style="width:100%;display:block;">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="community" id="community">
+  <div class="container">
+    <span class="section-label">Our Network</span>
+    <h2 class="section-title">Built by Community, for Community</h2>
+    <p class="section-body">PGMG brings together a diverse network of media professionals, storytellers, and community advocates united by a shared commitment to Filipino visibility and empowerment.</p>
+    <div class="team-grid">
+      <div class="team-card"><div class="team-card-img" style="background-image:url('images/img005.png')"></div><div class="team-card-body"><div class="team-avatar red">MP</div><h4>Media Professionals</h4><div class="role">Journalists &amp; Editors</div><p>Experienced reporters and editors dedicated to community journalism and accurate storytelling.</p></div></div>
+      <div class="team-card"><div class="team-card-img" style="background-image:url('images/img008.png')"></div><div class="team-card-body"><div class="team-avatar navy">WW</div><h4>Writers &amp; Correspondents</h4><div class="role">Storytellers</div><p>Writers, columnists, and field correspondents covering communities near and far.</p></div></div>
+      <div class="team-card"><div class="team-card-img" style="background-image:url('images/img006.png')"></div><div class="team-card-body"><div class="team-avatar dark">CL</div><h4>Community Leaders</h4><div class="role">Advocates</div><p>Civic leaders and advocates who connect PGMG to the communities we serve.</p></div></div>
+      <div class="team-card"><div class="team-card-img" style="background-image:url('images/img007.png')"></div><div class="team-card-body"><div class="team-avatar gold">NP</div><h4>Nonprofit Partners</h4><div class="role">Strategic Partners</div><p>Organizations collaborating with PGMG to expand reach and deepen community impact.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--navy-dark);padding:5rem 0;" id="top-awards">
+  <div style="max-width:1200px;margin:0 auto;padding:0 2rem;">
+
+    <!-- HEADER -->
+    <div style="text-align:center;margin-bottom:3.5rem;">
+      <span style="font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.75rem;">Community Recognition</span>
+      <h2 style="font-family:'Arial Black',Arial,sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);text-transform:uppercase;letter-spacing:.02em;color:var(--white);line-height:1.1;margin-bottom:1rem;">PGMG Members Honored at 2026 TOP Awards</h2>
+      <div style="width:60px;height:4px;background:var(--red);margin:0 auto 1.25rem;border-radius:2px;"></div>
+      <p style="font-family:Arial,sans-serif;font-size:1rem;line-height:1.8;color:rgba(255,255,255,.7);max-width:640px;margin:0 auto;">PGMG's own <strong style="color:var(--gold)">Dan Nino</strong> and <strong style="color:var(--gold)">Ellen Rodriguez-Swing</strong> were among the recipients of the prestigious <strong style="color:var(--white)">2026 TOP (The Outstanding Pilipinos) Awards</strong>, each receiving a California Legislature Assembly Certificate of Recognition. They follow in the footsteps of PGMG Chairman <strong style="color:var(--gold)">Val Abelgas</strong>, who was the organization's first-ever TOP Awardee, honored for Media. Your PGMG family is so proud of you!</p>
+    </div>
+
+    <!-- TWO AWARDEE CARDS -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:3rem;">
+
+      <!-- DAN NINO -->
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:10px;overflow:hidden;border-top:4px solid var(--gold);">
+        <div style="position:relative;overflow:hidden;height:420px;">
+          <img src="images/img017.jpg" alt="Dan Nino — 2026 TOP Award" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .4s ease;">
+        </div>
+        <div style="padding:1.75rem;">
+          <div style="font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">PGMG President</div>
+          <h3 style="font-family:'Arial Black',Arial,sans-serif;font-size:1.4rem;color:var(--white);text-transform:uppercase;letter-spacing:.03em;margin-bottom:.5rem;">Dan Nino</h3>
+          <div style="display:inline-block;background:var(--red);color:var(--white);font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;margin-bottom:1rem;">2026 TOP Award Recipient</div>
+          <p style="font-family:Arial,sans-serif;font-size:14px;color:rgba(255,255,255,.65);line-height:1.75;">Honored for his outstanding achievement in the field of Journalism and his dedication to excellence, integrity, and impactful storytelling in service of the Filipino-American community.</p>
+        </div>
+      </div>
+
+      <!-- ELLEN RODRIGUEZ-SWING -->
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:10px;overflow:hidden;border-top:4px solid var(--gold);">
+        <div style="position:relative;overflow:hidden;height:420px;">
+          <img src="images/img018.jpg" alt="Ellen Rodriguez-Swing — 2026 TOP Award" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .4s ease;">
+        </div>
+        <div style="padding:1.75rem;">
+          <div style="font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">PGMG Public Relations Officer</div>
+          <h3 style="font-family:'Arial Black',Arial,sans-serif;font-size:1.4rem;color:var(--white);text-transform:uppercase;letter-spacing:.03em;margin-bottom:.5rem;">Ellen Rodriguez-Swing</h3>
+          <div style="display:inline-block;background:var(--red);color:var(--white);font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;margin-bottom:1rem;">2026 TOP Award Recipient</div>
+          <p style="font-family:Arial,sans-serif;font-size:14px;color:rgba(255,255,255,.65);line-height:1.75;">Honored for her outstanding community service, exemplary leadership, and steadfast commitment to advancing and empowering the Filipino-American community.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM QUOTE + CERRITOS PHOTO -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;">
+      <div style="border-left:4px solid var(--gold);padding-left:1.5rem;">
+        <p style="font-family:Arial,sans-serif;font-size:1.1rem;line-height:1.85;color:rgba(255,255,255,.85);margin-bottom:1rem;font-style:italic;">"Your PGMG family is so proud of you."</p>
+        <p style="font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);">Joe Cobilla Jr.</p>
+        <p style="font-family:Arial,sans-serif;font-size:12px;color:rgba(255,255,255,.4);margin-top:4px;">PGMG Member</p>
+      </div>
+      <div style="border-radius:8px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.4);border:2px solid rgba(245,197,24,.2);">
+        <img src="images/img010.png" alt="PGMG at City of Cerritos" style="width:100%;display:block;">
+        <div style="background:rgba(15,26,69,.95);padding:.85rem 1.25rem;border-top:2px solid var(--gold);">
+          <p style="font-family:Arial,sans-serif;font-size:12px;color:rgba(255,255,255,.6);line-height:1.5;">PGMG members representing the Filipino community at the City of Cerritos event.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section style="background:var(--offwhite);padding:4rem 0;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 2rem;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
+      <div style="border-radius:8px;overflow:hidden;box-shadow:0 8px 30px rgba(27,44,107,.15);">
+        <img src="images/img019.png" alt="Philippine Post PGMG Coverage" style="width:100%;display:block;">
+      </div>
+      <div>
+        <span style="font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);display:block;margin-bottom:.5rem;">In the News</span>
+        <h2 style="font-family:'Arial Black',Arial,sans-serif;font-size:clamp(1.5rem,2.5vw,2rem);text-transform:uppercase;letter-spacing:.02em;color:var(--navy);margin-bottom:1rem;">PGMG: A Night of Fun, Food and Camaraderie</h2>
+        <p style="font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:1rem;">Philippine Post · January 9, 2026</p>
+        <p style="font-family:Arial,sans-serif;font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:1rem;">The Philippine Post featured PGMG's holiday celebration — a five-hour evening of community spirit, Filipino food, raffles, and karaoke. The group also shared plans for an upcoming scholarship fund-raiser for Filipino journalism students.</p>
+        <a href="/gallery/#press" style="display:inline-block;font-family:'Arial Black',Arial,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:var(--red);color:var(--white);padding:12px 24px;border-radius:3px;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='var(--red-dark)'" onmouseout="this.style.background='var(--red)'">Read More in Gallery</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--white);padding:5rem 0;" id="officers">
+  <div style="max-width:1200px;margin:0 auto;padding:0 2rem;">
+    <span style="font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);display:block;margin-bottom:.5rem;">Leadership</span>
+    <h2 style="font-family:'Arial Black',Arial,sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);text-transform:uppercase;letter-spacing:.02em;color:var(--navy);margin-bottom:.75rem;">Officers &amp; Board Members</h2>
+    <p style="font-family:Arial,sans-serif;font-size:1rem;color:var(--muted);line-height:1.8;max-width:700px;margin-bottom:3rem;">PGMG is led by experienced journalists and community advocates committed to uplifting the standards of Filipino media and serving the information needs of Filipinos worldwide.</p>
+        <div style="margin-bottom:2.5rem;">
+      <span style="font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#6b6b6b;display:block;margin-bottom:.75rem;">In Loving Memory</span>
+      <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:4px solid #555;display:flex;background:var(--offwhite);" class="profile-card" data-profile="manny-ilagan" onclick="openProfileModal(this)">
+        <div style="width:170px;flex-shrink:0;overflow:hidden;"><img src="images/img020.jpg" alt="Emmanuel &ldquo;Manny&rdquo; Ilagan" style="width:170px;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+        <div style="padding:1.5rem;flex:1;">
+          <div style="font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6b6b6b;margin-bottom:.5rem;">Founding Chairman &middot; PGMG (1954&ndash;2024)</div>
+          <h3 style="font-family:'Arial Black',Arial,sans-serif;font-size:1.3rem;color:var(--navy);text-transform:uppercase;margin-bottom:.75rem;">Emmanuel &ldquo;Manny&rdquo; Ilagan &dagger;</h3>
+          <p style="font-family:Arial,sans-serif;font-size:13px;color:var(--muted);line-height:1.75;">PGMG's founding chairman, whose lunch invitation at an IHOP in Cerritos in October 2023 set everything in motion. A former Officer-in-Charge and Tourism Director for the Philippine Consulate General of Los Angeles and longtime contributor to the Asian Journal, he passed away on July 1, 2024 after a long bout with cancer.
+          <span class="profile-view-more">View Full Profile &rarr;</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:2.5rem;">
+      <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:4px solid var(--red);display:flex;" class="profile-card" data-profile="dan-nino" onclick="openProfileModal(this)">
+        <div style="width:170px;flex-shrink:0;overflow:hidden;"><img src="images/img021.jpg" alt="Dan E. Nino" style="width:170px;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+        <div style="padding:1.5rem;flex:1;">
+          <div style="font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:3px;">President</div>
+          <h3 style="font-family:'Arial Black',Arial,sans-serif;font-size:1.15rem;color:var(--navy);text-transform:uppercase;margin-bottom:2px;">Dan E. Nino</h3>
+          <p style="font-family:Arial,sans-serif;font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:.85rem;">Syndicated columnist and contributing writer for Philippine News Today, Philippine Post, Weekend Balita, Asian Journal, Los Cerritos Community News, and Balikbayan Magazine. Past president of the Filipino-American Press Club of Los Angeles.</p>
+        
+            <span class="profile-view-more">View Full Profile &rarr;</span>
+          </div>
+      
+          </div>
+      <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:4px solid var(--navy);display:flex;" class="profile-card" data-profile="val-abelgas" onclick="openProfileModal(this)">
+        <div style="width:170px;flex-shrink:0;overflow:hidden;"><img src="images/img022.jpg" alt="Val G. Abelgas" style="width:170px;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+        <div style="padding:1.5rem;flex:1;">
+          <div style="font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:3px;">Chairman of the Board</div>
+          <h3 style="font-family:'Arial Black',Arial,sans-serif;font-size:1.15rem;color:var(--navy);text-transform:uppercase;margin-bottom:2px;">Val G. Abelgas</h3>
+          <p style="font-family:Arial,sans-serif;font-size:13px;color:var(--muted);line-height:1.75;">Publisher and Editor-in-Chief of the Philippine Post. Formerly managing editor of the Philippine Daily Express, Manila Standard, and Philippine Times Journal, and five-time director of the National Press Club of the Philippines.</p>
+        
+            <span class="profile-view-more">View Full Profile &rarr;</span>
+          </div>
+      
+          </div>
+    </div>
+        <div style="margin-bottom:2rem;">
+      <h3 style="font-family:'Arial Black',Arial,sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin-bottom:1.25rem;padding-bottom:.6rem;border-bottom:2px solid var(--gray);">Officers</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--navy);display:flex;" class="profile-card" data-profile="lydia-solis" onclick="openProfileModal(this)">
+          <div style="width:110px;flex-shrink:0;overflow:hidden;"><img src="images/img023.jpg" alt="Lydia V. Solis" style="width:110px;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Vice President</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Lydia V. Solis</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">Southern California journalist since 1988, serving as Associate Editor of the Philippine Post and a contributor to Balita Media's US Asian Post and Weekend Balita. Past president of the Philippine Women's University Alumni Association of Southern California.</p>
+          
+            <span class="profile-view-more">View Full Profile &rarr;</span>
+          </div>
+        
+          </div>
+
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--navy);display:flex;" class="profile-card" data-profile="donna-arevalo" onclick="openProfileModal(this)">
+          <div style="width:110px;flex-shrink:0;overflow:hidden;"><img src="images/img024.jpg" alt="Donnabelle Gatdula-Arevalo" style="width:110px;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Secretary</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Donnabelle Gatdula-Arevalo</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">Veteran business journalist who rose to Senior Business Reporter and Los Angeles Correspondent for The Philippine Star. Now Producer for The Filipino Channel (TFC) and Senior Correspondent-North America for The Filipino Correspondent Network.</p>
+          
+            <span class="profile-view-more">View Full Profile &rarr;</span>
+          </div>
+        
+          </div>
+
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--navy);display:flex;" class="profile-card" data-profile="meg-ilagan" onclick="openProfileModal(this)">
+          <div style="width:110px;flex-shrink:0;overflow:hidden;"><img src="images/img025.jpg" alt="Meg Ilagan" style="width:110px;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Treasurer</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Meg Ilagan, MBA</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">Associate Publisher and contributor to the Philippine Post, continuing the media legacy she shared with her late husband and PGMG founding chairman, Manny Ilagan.</p>
+          
+            <span class="profile-view-more">View Full Profile &rarr;</span>
+          </div>
+        
+          </div>
+
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--navy);display:flex;" class="profile-card" data-profile="ellen-swing" onclick="openProfileModal(this)">
+          <div style="width:110px;flex-shrink:0;overflow:hidden;"><img src="images/img026.jpg" alt="Ellen Rodriguez-Swing" style="width:110px;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Press Relations Officer</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Ellen Rodriguez-Swing</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">A community advocate, civic leader, and journalist dedicated to elevating Filipino American voices. Founder and Inaugural President of the Filipino American Chamber of Commerce of Cerritos, and Public Relations Officer for PGMG.</p>
+          
+            <span class="profile-view-more">View Full Profile &rarr;</span>
+          </div>
+        
+          </div>
+
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--navy);display:flex;" class="profile-card" data-profile="joe-cobilla" onclick="openProfileModal(this)">
+          <div style="width:110px;flex-shrink:0;overflow:hidden;"><img src="images/img027.jpg" alt="Joe T. Cobilla Jr." style="width:110px;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Press Relations Officer</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Joe T. Cobilla Jr.</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">Veteran press photographer and member of the Philippine Press Photographers (PPP)-USA. Believed to be the only Filipino photographer to have covered the Miss Universe pageant 28 times across 18 countries.</p>
+          
+            <span class="profile-view-more">View Full Profile &rarr;</span>
+          </div>
+        
+          </div>
+
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--gold);display:flex;" class="profile-card" data-profile="rick-gavino" onclick="openProfileModal(this)">
+<div class="avatar-placeholder" style="width:110px;flex-shrink:0;"><span style="font-size:26px;">RG</span></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Auditor</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Rick Gavino</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">Serves as Auditor for the Philippine Global Media Group.
+            <span class="profile-view-more">View Full Profile &rarr;</span></p>
+          </div>
+        </div>
+
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--gold);display:flex;" class="profile-card" data-profile="nimfa-rueda" onclick="openProfileModal(this)">
+<div class="avatar-placeholder" style="width:110px;flex-shrink:0;"><span style="font-size:26px;">NU</span></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Vice President</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Nimfa U. Rueda</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">Serves as Vice President of the Philippine Global Media Group (PGMG).
+            <span class="profile-view-more">View Full Profile &rarr;</span></p>
+          </div>
+        </div>
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--gold);display:flex;" class="profile-card" data-profile="jannelle-so" onclick="openProfileModal(this)">
+<div class="avatar-placeholder" style="width:110px;flex-shrink:0;"><span style="font-size:26px;">JS</span></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Vice President</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Jannelle So</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">Serves as Vice President of the Philippine Global Media Group (PGMG).
+            <span class="profile-view-more">View Full Profile &rarr;</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:2rem;">
+      <h3 style="font-family:'Arial Black',Arial,sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin-bottom:1.25rem;padding-bottom:.6rem;border-bottom:2px solid var(--gray);">Board Members</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--gold);display:flex;" class="profile-card" data-profile="bobby-crisostomo" onclick="openProfileModal(this)">
+          <div style="width:110px;flex-shrink:0;overflow:hidden;"><img src="images/img028.jpg" alt="Bobby Crisostomo" style="width:110px;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Director</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Bobby Crisostomo</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">Veteran photojournalist who has worked in various capacities in publications in the Philippines and United States. Now Chief Photographer of the Philippine Post and photographer of Philippine Tribune.</p>
+          
+            <span class="profile-view-more">View Full Profile &rarr;</span>
+          </div>
+        
+          </div>
+
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--gold);display:flex;" class="profile-card" data-profile="nemen-cabatuando" onclick="openProfileModal(this)">
+          <div style="width:110px;flex-shrink:0;overflow:hidden;"><img src="images/img029.jpg" alt="Nemen L. Cabatuando" style="width:110px;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Director</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Nemen L. Cabatuando</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">His journalism roots trace back to Florentino Torres High School, where he was named Most Outstanding Campus Journalist by the YMCA. Now serves as Vice President for Education of the Computer Society for Filipinos (Comsofil).</p>
+          
+            <span class="profile-view-more">View Full Profile &rarr;</span>
+          </div>
+        
+          </div>
+
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--gold);display:flex;" class="profile-card" data-profile="doeleth-gatdula" onclick="openProfileModal(this)">
+          <div style="width:110px;flex-shrink:0;overflow:hidden;"><img src="images/img030.jpg" alt="Doeleth L. Gatdula, M.D." style="width:110px;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Director</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Doeleth L. Gatdula, M.D.</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">Serves as Production Supervisor for The Filipino Channel (TFC), Correspondent-North America for TFCN, and a contributor to the Philippine Post.</p>
+          
+            <span class="profile-view-more">View Full Profile &rarr;</span>
+          </div>
+        
+          </div>
+
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--gold);display:flex;" class="profile-card" data-profile="louinn-lota" onclick="openProfileModal(this)">
+          <div style="width:110px;flex-shrink:0;overflow:hidden;"><img src="images/img031.jpg" alt="Louinn Lota" style="width:110px;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Director</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Louinn Lota</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">Spent 18 years as a senior reporter and editor in print and radio broadcast for The Associated Press. Now contributes to Philippine News, Weekend Balita, US Asian Post, and the Philippine Post.</p>
+          
+            <span class="profile-view-more">View Full Profile &rarr;</span>
+          </div>
+        
+          </div>
+
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--gold);display:flex;" class="profile-card" data-profile="vics-magsaysay" onclick="openProfileModal(this)">
+          <div style="width:110px;flex-shrink:0;overflow:hidden;"><img src="images/img032.jpg" alt="Vics Magsaysay" style="width:110px;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Director</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Vics Magsaysay</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">A self-taught fine art nature photographer, painter, sculptor, and makata (Tagalog poet) with a collection of more than one hundred thousand published images. Writes for Weekend Balita, the Philippine Post, and Philippine News.</p>
+          
+            <span class="profile-view-more">View Full Profile &rarr;</span>
+          </div>
+        
+          </div>
+
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--gold);display:flex;" class="profile-card" data-profile="mylene-capati" onclick="openProfileModal(this)">
+          <div style="width:110px;flex-shrink:0;overflow:hidden;"><img src="images/img033.jpg" alt="Mylene Capati" style="width:110px;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Director</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Mylene Capati</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">A community-minded content creator with a passion for digital storytelling and community engagement. Founder of iMprints, a custom apparel and promotional printing company.</p>
+          
+            <span class="profile-view-more">View Full Profile &rarr;</span>
+          </div>
+        
+          </div>
+
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--gold);display:flex;" class="profile-card" data-profile="marc-pijuan" onclick="openProfileModal(this)">
+          <div style="width:110px;flex-shrink:0;overflow:hidden;"><img src="images/img034.jpg" alt="Marc Pijuan" style="width:110px;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Director</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Marc M. Pijuan</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">Started working in the newspaper field in 1997 when he was asked by his stepfather, Eugene Moses, to do the layout for the inaugural issue of the San Gabriel Valley Examiner.</p>
+          
+            <span class="profile-view-more">View Full Profile &rarr;</span>
+          </div>
+        
+          </div>
+
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--gold);display:flex;" class="profile-card" data-profile="isidric-panganiban" onclick="openProfileModal(this)">
+<div style="width:110px;flex-shrink:0;overflow:hidden;"><img src="images/img035.jpg" alt="Isidric M. Panganiban" style="width:110px;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Director</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Isidric M. Panganiban</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">Filipino-American media professional, producer, and communications specialist dedicated to highlighting the achievements, culture, and voices of the Filipino-American community.
+            <span class="profile-view-more">View Full Profile &rarr;</span></p>
+          </div>
+        </div>
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--gold);display:flex;" class="profile-card" data-profile="julian-oriel" onclick="openProfileModal(this)">
+<div class="avatar-placeholder" style="width:110px;flex-shrink:0;"><span style="font-size:26px;">JO</span></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Director</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Julian Escobar Oriel</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">COO of Philippines & Asian Report/ASIAN Reader and Managing Editor, Creative & Art Director, and Photographer. Official photographer to Philippine Presidents and visiting dignitaries.
+            <span class="profile-view-more">View Full Profile &rarr;</span></p>
+          </div>
+        </div>
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--gold);display:flex;" class="profile-card" data-profile="eddie-ferrer" onclick="openProfileModal(this)">
+<div style="width:110px;flex-shrink:0;overflow:hidden;"><img src="images/img036.jpg" alt="Eddie C. Ferrer" style="width:110px;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Director</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Eddie C. Ferrer</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">Veteran Baguio City broadcaster who helped establish Northern Luzon's DZWT-AM and DZWR-FM stations, and formerly Editor-in-Chief of St. Louis University's White and Blue.
+            <span class="profile-view-more">View Full Profile &rarr;</span></p>
+          </div>
+        </div>
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--gold);display:flex;" class="profile-card" data-profile="albert-gabot" onclick="openProfileModal(this)">
+<div class="avatar-placeholder" style="width:110px;flex-shrink:0;"><span style="font-size:26px;">AG</span></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Director</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Albert G. Gabot</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">Editor-in-Chief of Philippine News Today, and a member of PGMG's Board of Directors.
+            <span class="profile-view-more">View Full Profile &rarr;</span></p>
+          </div>
+        </div>
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--gold);display:flex;" class="profile-card" data-profile="meh-guevarra" onclick="openProfileModal(this)">
+<div class="avatar-placeholder" style="width:110px;flex-shrink:0;"><span style="font-size:26px;">MM</span></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Director</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Meh M. Guevarra</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">Editor of Philippine Tribune, and a member of PGMG's Board of Directors.
+            <span class="profile-view-more">View Full Profile &rarr;</span></p>
+          </div>
+        </div>
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--gold);display:flex;" class="profile-card" data-profile="joy-marino" onclick="openProfileModal(this)">
+<div class="avatar-placeholder" style="width:110px;flex-shrink:0;"><span style="font-size:26px;">JM</span></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Director</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Joy Marino</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">USA Today and Balita Advertising Manager, and a member of PGMG's Board of Directors.
+            <span class="profile-view-more">View Full Profile &rarr;</span></p>
+          </div>
+        </div>
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--gold);display:flex;" class="profile-card" data-profile="benny-uy" onclick="openProfileModal(this)">
+<div class="avatar-placeholder" style="width:110px;flex-shrink:0;"><span style="font-size:26px;">BU</span></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Director</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Benny Uy</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">Freelance photographer and a member of PGMG's Board of Directors.
+            <span class="profile-view-more">View Full Profile &rarr;</span></p>
+          </div>
+        </div>
+        <div style="border:1px solid var(--gray);border-radius:10px;overflow:hidden;border-top:3px solid var(--gold);display:flex;" class="profile-card" data-profile="mel-velasco" onclick="openProfileModal(this)">
+<div class="avatar-placeholder" style="width:110px;flex-shrink:0;"><span style="font-size:26px;">MT</span></div>
+          <div style="padding:1.1rem 1.25rem;flex:1;">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:2px;">Director</div>
+            <h4 style="font-family:'Arial Black',Arial,sans-serif;font-size:1rem;color:var(--navy);text-transform:uppercase;margin-bottom:6px;">Mel T. Velasco</h4>
+            <p style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);line-height:1.6;">Philippine News Today columnist, and a member of PGMG's Board of Directors.
+            <span class="profile-view-more">View Full Profile &rarr;</span></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    
+    
+<div style="background:var(--navy-dark);border-radius:8px;padding:1.75rem 2rem;border-left:4px solid var(--gold);">
+      <p style="font-family:Arial,sans-serif;font-size:14px;color:rgba(255,255,255,.85);line-height:1.85;font-style:italic;">"We invite our various publics to share our mission of serving our community the way we know best — helping inform our readers and viewers of latest developments in the community and in the homeland, and serving as facilitators for organizations to disseminate their projects and goals to our readers."</p>
+      <p style="font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:.85rem;">Dan E. Nino &amp; Val G. Abelgas</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--offwhite);padding:5rem 0;" id="press-release">
+  <div style="max-width:1200px;margin:0 auto;padding:0 2rem;">
+    <span style="font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);display:block;margin-bottom:.5rem;">Press Release</span>
+    <h2 style="font-family:'Arial Black',Arial,sans-serif;font-size:clamp(1.5rem,2.5vw,2rem);text-transform:uppercase;letter-spacing:.02em;color:var(--navy);margin-bottom:.5rem;">PGMG to Hold Induction/Gala Night August 8</h2>
+    <div style="font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:2rem;">Official Press Release</div>
+    <div style="display:grid;grid-template-columns:1fr 300px;gap:3rem;align-items:start;">
+      <div style="font-family:Arial,sans-serif;font-size:15px;color:var(--text);line-height:1.9;">
+        <p style="margin-bottom:1rem;">On its third year as an active press organization, the Philippine Global Media Group (PGMG) will hold its Induction of Officers and Gala Night on <strong>August 8 (Saturday) at 6:00 PM</strong> at the <strong>Crystal Ballroom</strong> of the <strong>Sheraton Cerritos Hotel</strong>, 12725 Center Court Drive, Cerritos.</p>
+        <p style="margin-bottom:1rem;">This was announced by incoming president <strong>Dan Estabillo Nino</strong> and <strong>Val G. Abelgas</strong>, president and board chairman respectively of PGMG, a City of Cerritos-based public benefit <strong>501 C-3 nonprofit corporation</strong>.</p>
+        <p style="margin-bottom:1rem;">Nino began his media career in Manila in 1973 and has contributed to Los Cerritos Community News, Philippine News Today, Asian Journal, Balikbayan Magazine, Weekend Balita, and the Philippine Post. He was recently conferred the <strong>2026 TOP Award</strong> for outstanding achievement in Journalism.</p>
+        <p style="margin-bottom:1rem;">Val Abelgas, founding president of PGMG, is publisher and editor-in-chief of Philippine Post. A professional journalist for 54 years, he was the <strong>first TOP Awardee</strong> for Outstanding Achievement in Journalism in 2018 and <strong>first FAPCCA Journalist of the Year</strong> in 2016.</p>
+        <p style="margin-bottom:1rem;">Other officers to be sworn in by Philippine Consul General to Los Angeles <strong>Adelio Angelito S. Cruz</strong> include Vice Presidents <strong>Lydia V. Solis</strong>, <strong>Nimfa U. Rueda</strong>, and <strong>Jannelle So</strong>; Secretary <strong>Donna Gatdula-Arevalo</strong>; Treasurer <strong>Meg Ilagan</strong>; Auditor <strong>Rick Gavino</strong>; PROs <strong>Ellen Rodriguez-Swing</strong> and <strong>Joe T. Cobilla, Jr.</strong>; and 14 board members.</p>
+        <p style="margin-bottom:1rem;">PGMG was founded in <strong>November 2023</strong> by <strong>Manny Ilagan</strong>, Val Abelgas, Lydia Solis and Nimfa Rueda to unite media practitioners and uplift journalistic standards in Southern California, with a vision to expand to the global Filipino diaspora.</p>
+        <p style="margin-bottom:1.75rem;">Among its accomplishments: the book launch of <em>"California: A Philippine Territory Almost"</em> by <strong>Albert G. Gabot</strong>; supporting the renaming of Echo Park Library to Carlos Bulusan Library; covering community events across Southern California; and awarding a scholarship to a college-bound Filipino-American student.</p>
+        <div style="background:var(--white);border:1px solid var(--gray);border-radius:6px;padding:1.25rem 1.5rem;border-left:4px solid var(--red);">
+          <div style="font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">For Sponsorship &amp; Gala Night Attendance</div>
+          <p style="font-family:Arial,sans-serif;font-size:14px;color:var(--navy);line-height:1.7;">(562) 508-8099 &nbsp;|&nbsp; (562) 469-8030 &nbsp;|&nbsp; <a href="mailto:info@pgmg.org" style="color:var(--red);font-weight:700;">info@pgmg.org</a></p>
+        </div>
+      </div>
+      <div style="position:sticky;top:100px;">
+        <div style="border-radius:8px;overflow:hidden;box-shadow:0 8px 30px rgba(27,44,107,.2);margin-bottom:1rem;"><img src="images/img016.jpg" alt="Induction of Officers Flyer" style="width:100%;display:block;"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.75rem;">
+          <div style="text-align:center;border:1px solid var(--gray);border-radius:6px;padding:1rem;background:var(--white);">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">Date</div>
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:1.1rem;color:var(--navy);">Aug 8</div>
+            <div style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);">2026 &nbsp;|&nbsp; 6 PM</div>
+          </div>
+          <div style="text-align:center;border:1px solid var(--gray);border-radius:6px;padding:1rem;background:var(--white);">
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">Ticket</div>
+            <div style="font-family:'Arial Black',Arial,sans-serif;font-size:1.1rem;color:var(--red);">$110</div>
+            <div style="font-family:Arial,sans-serif;font-size:12px;color:var(--muted);">Per person</div>
+          </div>
+        </div>
+        <a href="#contact" style="display:block;text-align:center;font-family:'Arial Black',Arial,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:var(--red);color:var(--white);padding:13px;border-radius:3px;text-decoration:none;">Reserve Your Seat</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="involvement" id="involvement">
+  <div class="container">
+    <span class="section-label">Get Involved</span>
+    <h2 class="section-title">Be Part of the Movement</h2>
+    <p class="section-body">There are many ways to support and participate in Philippine Global Media Group's mission. Every contribution — of time, talent, or treasure — makes a difference.</p>
+    <div class="involve-grid">
+      <div class="involve-card"><div class="involve-card-img" style="background-image:url('https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&auto=format&fit=crop&q=60')"></div><div class="involve-card-body"><h3>Become a Contributor</h3><p>Are you a journalist, writer, photographer, or media professional? Join our growing network and help us tell the stories that matter.</p><a href="mailto:info@pgmg.org" class="link-gold">Submit your work &rarr;</a></div></div>
+      <div class="involve-card"><div class="involve-card-img" style="background-image:url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&auto=format&fit=crop&q=60')"></div><div class="involve-card-body"><h3>Partner With Us</h3><p>Organizations, businesses, and nonprofits that align with our mission are welcome to collaborate on events, content, and community initiatives.</p><a href="mailto:info@pgmg.org" class="link-gold">Explore partnerships &rarr;</a></div></div>
+      <div class="involve-card"><div class="involve-card-img" style="background-image:url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600&auto=format&fit=crop&q=60')"></div><div class="involve-card-body"><h3>Support Our Mission</h3><p>As a 501(c)(3) nonprofit, your tax-deductible donation directly supports community journalism, cultural programming, and civic engagement.</p><a href="mailto:info@pgmg.org" class="link-gold">Donate to PGMG &rarr;</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <span class="section-label">Reach Us</span>
+    <h2 class="section-title">Let's Start a Conversation</h2>
+    <p class="section-body">Whether you have a story to share, want to partner with us, or simply want to learn more about our work — we'd love to hear from you.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item"><div class="contact-icon red"><svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div><div><h4>Email</h4><a href="mailto:info@pgmg.org">info@pgmg.org</a></div></div>
+        <div class="contact-item"><div class="contact-icon navy"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg></div><div><h4>Website</h4><a href="https://pgmg.org" target="_blank">pgmg.org</a></div></div>
+        <div class="contact-item"><div class="contact-icon dark"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div><div><h4>Facebook</h4><a href="https://www.facebook.com/profile.php?id=61560143865748" target="_blank" style="color:var(--navy);font-weight:600;">Philippine Global Media Group</a><br><a href="https://www.facebook.com/profile.php?id=61560143865748" target="_blank" style="display:inline-block;margin-top:8px;font-family:'Arial Black',Arial,sans-serif;font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:#1877F2;color:var(--white);padding:7px 16px;border-radius:3px;text-decoration:none;">Follow on Facebook</a></div></div>
+        <div style="padding:1.5rem;background:var(--white);border:1px solid var(--gray);border-radius:6px;border-left:4px solid var(--gold)">
+          <div style="font-family:'Arial Black',Arial,sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px">Nonprofit Status</div>
+          <p style="font-size:14px;color:var(--navy);line-height:1.6">Philippine Global Media Group is a registered 501(c)(3) nonprofit organization. Donations are tax-deductible to the fullest extent permitted by law.</p>
+        </div>
+
+      </div>
+      <div class="contact-form">
+        <h3>Send Us a Message</h3>
+        <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" placeholder="Your full name"></div>
+        <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" placeholder="your@email.com"></div>
+        <div class="form-group"><label for="subject">Subject</label><select id="subject"><option value="">Select a topic...</option><option>Submit a Story</option><option>Partnership Inquiry</option><option>Event Information</option><option>Donation / Support</option><option>Media Inquiry</option><option>General Question</option></select></div>
+        <div class="form-group"><label for="message">Message</label><textarea id="message" placeholder="How can we help you?"></textarea></div>
+        <button class="btn-submit" onclick="handleSubmit()">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-flag"></div>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo"><img src="images/img004.png" alt="Philippine Global Media Group"></div>
+      <p class="footer-desc">A nonprofit media organization dedicated to community journalism, cultural storytelling, and civic engagement for Filipinos and Filipino Americans worldwide.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61560143865748" target="_blank" class="social-btn"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="mailto:info@pgmg.org" class="social-btn"><svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></a>
+        <a href="https://pgmg.org" class="social-btn"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg></a>
+      </div>
+      <div style="margin-top:1rem"><span class="nonprofit-badge">501(c)(3) Registered Nonprofit</span></div>
+    </div>
+    <div class="footer-col"><h4>About</h4><ul><li><a href="#about">Our Mission</a></li><li><a href="/history/">Our History</a></li><li><a href="#platforms">Our Work</a></li><li><a href="#focus">What We Cover</a></li><li><a href="#community">Our Network</a></li><li><a href="/gallery/">Gallery</a></li>
+      <li><a href="/scholarship/">Scholarship</a></li></ul></div>
+    <div class="footer-col"><h4>Get Involved</h4><ul><li><a href="#contact">Submit a Story</a></li><li><a href="#contact">Partner With Us</a></li><li><a href="#contact">Donate</a></li><li><a href="#events">Events</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:info@pgmg.org">info@pgmg.org</a></li><li><a href="https://pgmg.org" target="_blank">pgmg.org</a></li><li><a href="https://www.facebook.com/profile.php?id=61560143865748" target="_blank">Facebook Page</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>2025 Philippine Global Media Group. All rights reserved. Registered 501(c)(3) Nonprofit Organization.</span>
+    <span><a href="mailto:info@pgmg.org">Privacy</a> &nbsp;·&nbsp; <a href="mailto:info@pgmg.org">Terms</a></span>
+  </div>
+</footer>
+
+<script>
+function handleSubmit(){
+  var n=document.getElementById('name').value.trim();
+  var e=document.getElementById('email').value.trim();
+  var s=document.getElementById('subject').value;
+  var m=document.getElementById('message').value.trim();
+  if(!n||!e||!m){alert('Please fill in all required fields.');return;}
+  window.location.href='mailto:info@pgmg.org?subject='+encodeURIComponent(s||'Message from PGMG Website')+'&body='+encodeURIComponent('Name: '+n+'\n\nMessage:\n'+m);
+}
+var hbg=document.querySelector('.hamburger');
+var nl=document.querySelector('.nav-links');
+var open=false;
+if(hbg){hbg.addEventListener('click',function(){open=!open;if(open){nl.style.cssText='display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:#fff;padding:1rem 2rem 1.5rem;border-bottom:1px solid #dde0ec;box-shadow:0 8px 24px rgba(27,44,107,0.1);z-index:99;';}else{nl.style.display='none';}});}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var href = this.getAttribute('href');
+    if(!href || href === '#') return;
+    var t = document.querySelector(href);
+    if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); if(window.innerWidth<=600){nl.style.display='none';open=false;} }
+  });
+});
+
+// Hero slideshow
+(function(){
+  var slides = document.querySelectorAll('.hero-slide');
+  var dots   = document.querySelectorAll('.hero-dot');
+  var current = 0;
+  var timer;
+
+  function goSlide(n) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+  window.goSlide = goSlide;
+
+  function next() { goSlide(current + 1); }
+
+  function startTimer() { timer = setInterval(next, 4500); }
+  function resetTimer()  { clearInterval(timer); startTimer(); }
+
+  dots.forEach(function(d, i) {
+    d.addEventListener('click', function(){ goSlide(i); resetTimer(); });
+  });
+
+  startTimer();
+})();
+</script>
+<!-- PROFILE MODAL -->
+<div class="profile-modal" id="profileModal" onclick="closeProfileModalOutside(event)">
+  <div class="profile-modal-content">
+    <button class="profile-modal-close" onclick="closeProfileModal()">&times;</button>
+    <div class="profile-modal-photo" id="profileModalPhotoWrap"></div>
+    <div class="profile-modal-body">
+      <div class="profile-modal-role" id="profileModalRole"></div>
+      <div class="profile-modal-name" id="profileModalName"></div>
+      <div class="profile-modal-bio" id="profileModalBio"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+var PROFILE_BIOS = {
+  "dan-nino": {name:"Dan E. Ni\u00f1o", role:"President", bio:"<ul><li>Also served as Secretary and Chairman of the Board</li><li>Syndicated columnist and contributing writer - Philippine News Today, Philippine Post, Weekend Balita, Asian Journal, Los Cerritos Community News and Balikbayan Magazine</li><li>The Outstanding Pilipino (TOP) awardee for excellence and achievement in the field of journalism</li><li>Podcast co-host of Buhay Pinoy sa America on Orodeo You-Tube Channel</li><li>Correspondent \u2013 Manila Bulletin Today (now Manila Bulletin)</li><li>Contributing Editor - Sports Weekly Magazine</li><li>Contributing Writer \u2013 Mod Magazine</li><li>Community Relations Officer, head of public affairs and editor-in-chief of its corporate newsletter TINIG, Philippine Cellophane Film Corporation</li><li>Assistant for Public Relations \u2013 Landloil Resources Corporation</li><li>Principal & Founder \u2013 Summit Tax and Business Counselors</li><li>President - United Specialist Healthcare Foundation, Inc.</li><li>President \u2013 Filipino-American Press Club of Los Angeles</li><li>Former member - Philippine National Press Club</li><li>Contact: <a href='mailto:denino1951@gmail.com' style='color:var(--red);'>denino1951@gmail.com</a> &nbsp;|&nbsp; (562) 508-8099 &nbsp;|&nbsp; (562) 921-5116</li></ul>"},
+  "val-abelgas": {name:"Val G. Abelgas", role:"Chairman of the Board", bio:"<ul><li>Publisher & Editor-in-Chief \u2013 Philippine Post</li><li>Managing Editor \u2013 Philippines Daily Express; Managing Editor \u2013 Manila Standard; Managing Editor \u2013 Philippine Times Journal</li><li>Editor-in-Chief \u2013 Manila Headline; Editor-in-Chief -- Manila Science HS (The Nucleus); Editor-in-Chief \u2013 Campus Journal (UP Institute of Mass Communications)</li><li>Assistant News Editor \u2013 UP Philippine Collegian</li><li>Five-time Director \u2013 National Press Club of the Philippines (NPC)</li><li>Publisher-Editor \u2013 Hiyas Magazine</li><li>President \u2013 Philippine Press Club of America (PPCA)</li><li>Chairman -- Organizing Committee, First National Convention of Filipino Editors in North America</li><li>Journalist of the Year 2016 \u2013 Filipino American Press Club of California (FAPCCA)</li><li>Columnist of the Year 1993 & 1994 \u2013 PPCA (Philippine Times)</li><li>Newspaper of the Year 1993 & 1994 \u2013 PPCA (Philippine Times)</li><li>Excellence in Media \u2013 The Outstanding Pilipino Awards (TOP); first TOP Awardee for Media, honored alongside Richard Jimenez (Tourism), Atty. Roman Mosqueda (Law), Jimmy Borja (Music), Melette Lampino (Environmental Science), and Cecilia De Castro (Culinary Arts)</li><li>Editor-in-Chief \u2013 Weekend Balita; Editor-in-Chief \u2013 Philippine Times; Editor-in-Chief \u2013 Ang Peryodiko</li></ul>"},
+  "lydia-solis": {name:"Lydia V. Solis", role:"Vice President", bio:"<ul><li>Stringer - San Francisco-based Philippine News in 1988</li><li>Overview columnist and a correspondent \u2013 for Southern California and retired from PNEWS as chief correspondent during Covid era</li><li>Associate Editor - Philippine Post</li><li>Contributor - Balita Media, Inc. with two newspapers: US Asian Post and Weekend Balita</li><li>Received a grant from the Philippine American Women\u2019s Writers & Artists, and took Journalism courses at UCLA</li><li>Past President, Philippine Women\u2019s University Alumni Association of Southern California; Past President, Kalayaan Incorporated; 1st VP/2nd VP/PRO, Filipino American Chamber of Commerce, Tri-County (L.A., Riverside, and San Bernardino Counties); and PRO, Philippine Disaster Relief Organization</li><li>Management Analyst - Los Angeles Police Department and Department of Public Works, Bureau of Engineering</li><li>After retirement from the City of LA, served as Commissioner for the West Covina Seniors Commission for four years</li></ul>"},
+  "donna-arevalo": {name:"Donnabelle Gatdula-Arevalo", role:"Secretary", bio:"<ul><li>Producer \u2013 The Filipino Channel (TFC)</li><li>Senior Correspondent-North America - The Filipino Correspondent Network (TFCN)</li><li>Los Angeles Correspondent - The Philippine Star</li><li>Contributing Writer - The Asian Journal, The Philippine Post, Philippine News</li><li>Senior Business Reporter - The Philippine Star; Business Reporter - The Manila Chronicle</li><li>President \u2013 Economic Journalists Association of the Philippines (EJAP 2008)</li><li>Four Time Best Reporter (Energy) Awardee \u2013 EJAP Globe Business Journalism Excellence Awards (2005, 2006, 2008, 2011)</li><li>Lifetime Member \u2013 National Press Club (NPC); Honorary Member \u2013 EJAP</li><li>Assistant News Editor - Presidential Election Campaign</li><li>Feature Writer/Editor \u2013 After Six Travel Magazine; News Writer \u2013 Headline Newspaper</li></ul>"},
+  "meg-ilagan": {name:"Meg Ilagan, MBA", role:"Treasurer", bio:"<ul><li>Associate Publisher & Contributor\u2014 Philippine Post</li><li>Board of Director - Kalayaan Inc</li><li>Owner & CEO - Innovative Tours and Travel</li><li>Accredited Travel Agent - International Air Transport Association (IATA)</li><li>National Member - American Society of Travel Advisors</li><li>National Member - Medical Group Management Association (MGMA)</li><li>Secretary - American Association of Healthcare Administrative Management (AAHAM)</li></ul>"},
+  "rick-gavino": {name:"Rick Gavino", role:"Auditor", bio:""},
+  "ellen-swing": {name:"Ellen Rodriguez-Swing", role:"Press Relations Officer", bio:"<p>Ellen Rodriguez-Swing is a Filipino American community leader, accounting professional, business executive, and journalist dedicated to advancing Filipino American visibility, civic engagement, and community development.</p><p>As a contributing writer and community correspondent, she covers Filipino American leaders, businesses, organizations, and cultural events. Her media affiliations include the Philippine Post, Weekend Balita, Asian Journal, Los Cerritos Community News, and US Asian Post. She also serves as Public Relations Officer and Correspondent for the Philippine Global Media Group.</p><p>Ellen is the Founder and Inaugural President, and currently serves as Board Advisor, of the Filipino American Chamber of Commerce of Cerritos and Gateway Cities. She also serves in leadership roles with several nonprofit 501(c)(3) organizations, including Chairman of the Board of Our Community Foundation and the Pangasinan Brotherhood USA, as well as Auditor of Kalayaan Incorporated and the University of the Philippines Phi Delta Alpha Sorority–US Chapter.</p><p>Professionally, Ellen is the Principal of Framework Accounting and has more than 20 years of experience in accounting, tax planning, financial reporting, and advisory services. She also serves as Chief Financial Officer and Licensed Mortgage Loan Officer for Our Community Mortgage and as an Accounting Consultant for Kure It Cancer Research.</p><h5>Educational Background</h5><ul><li>Bachelor of Arts in Political Science – University of the Philippines Diliman</li><li>Bachelor of Science in Accounting – Western Governors University</li><li>Master\'s Degree in Accounting – Western Governors University</li></ul><h5>Selected Awards and Recognitions</h5><ul><li>Woman of Worth Award for Community Leadership, 2024</li><li>City of Cerritos Proclamation for Community Leadership, 2025</li><li>City of Cerritos Proclamation for Community Leadership, 2026</li><li>Lions Clubs International District 4-L3 Community Leadership Excellence Award, 2026</li><li>The Outstanding Pilipino Award for Community Leadership, 2026</li><li>Numerous additional awards and recognitions for community leadership and service</li></ul><p>Through journalism, financial leadership, and community service, Ellen continues to amplify Filipino American stories, empower organizations, and create meaningful impact.</p>"},
+  "joe-cobilla": {name:"Joe T. Cobilla Jr.", role:"Press Relations Officer", bio:"<ul><li>Member - Philippine Press Photographer (PPP) - USA</li><li>Contributing Photographer \u2013 Asian Journal, Dyaryo Pilipino, Tribune USA, TM Herald, TALIBA, Philippine Times</li><li>Contributing Photographer \u2013 Kodak USA, Disneyland</li><li>Contributing Photographer \u2013 Inquirer.net.us and The Philippine Post</li><li>PRO \u2013 Ministry of Tourism, Central Bank of the Philippines</li><li>The only Filipino photographer to have covered 18 countries, 28 times of Miss Universe contests</li><li>Photographer \u2013 50th Anniversary of United Nations in New York, 1st Asia Pacific Economic Conference in Seattle, 1st Miss Universe in Manila</li><li>Consistently winning 1st prize in the National Press Club Elizalde Photo Contest from 1979 to 1983</li><li>Public Information Office of the Philippine National Police</li></ul>"},
+  "marc-pijuan": {name:"Marc M. Pijuan", role:"Director", bio:"<ul><li>Started working in the newspaper field in 1997... to do the lay-out work for the inaugural issue of the San Gabriel Valley Examiner</li><li>Twenty-five years later, on January 2022, he became the Publisher and Editor of the \u201clegally adjudicated\u201c San Gabriel Valley Examiner</li></ul>"},
+  "louinn-lota": {name:"Louinn Lota", role:"Director", bio:"<ul><li>Spent 18 years, from 1985 to 2003, as a senior reporter and editor in both print and radio broadcast for The Associated Press</li><li>Contributes to Philippine News, Weekend Balita, US Asian Post, and the Philippine Post</li><li>Holds a B.A. in Journalism from California State University, Los Angeles, along with an M.Ed. from Loyola Marymount University, a Th.M. from Mount Saint Mary's University, and voice training from Los Angeles Valley College</li></ul>"},
+  "albert-gabot": {name:"Albert G. Gabot", role:"Director", bio:""},
+  "meh-guevarra": {name:"Meh M. Guevarra", role:"Director", bio:""},
+  "bobby-crisostomo": {name:"Bobby Crisostomo", role:"Director", bio:"<ul><li>Chief Photographer - Philippine Post; Photographer - Philippine Tribune</li><li>Veteran photojournalist - worked in various capacities in publications in the Philippines and United States</li><li>Former chief photographer - Woman Today Magazine, Women\u2018s Journal, and Sports World Magazine</li><li>Former photographer - Diaryo Pilipino</li></ul>"},
+  "julian-oriel": {name:"Julian Escobar Oriel", role:"Director", bio:"<ul><li>COO - Philippines & Asian Report/ASIAN Reader / Managing Editor Creative&Art Director / Photographer</li><li>Founder & President - Fil-Am Artists Club of San Diego; Manager - San Diego Philippine Library & Museum; CEO - Annual Fiesta Filipiniana</li><li>CFO - San Diego Fil-Am Humanitarian Foundation, Inc.</li><li>Official Photographer to Philippine Presidents and Visiting Dignitaries & Celebrities</li><li>Jose Rizal Lifetime Achievement Awardee, SDFAHF; Legendary Humanitarian Medallion Awardee, SDFAHF</li><li>Co-VP & Director - San Diego Fil-Am Youth Foundation, Inc</li></ul>"},
+  "vics-magsaysay": {name:"Vics Magsaysay", role:"Director", bio:"<ul><li>A self-taught fine art nature photographer, painter, sculptor, graphic and furniture designer, writer, and \u201cmakata\u201d</li><li>Presented numerous solo exhibitions... in the United States and Asia</li><li>Travel photographs published in books, magazines, and other media; Writer and lecturer \u2013 Healing Arts</li></ul>"},
+  "joy-marino": {name:"Joy Marino", role:"Director", bio:""},
+  "nemen-cabatuando": {name:"Nemen L. Cabatuando", role:"Director", bio:"<ul><li>Vice President for Education \u2013 Computer Society for Filipinos (Comsofil)</li><li>Associate Editor and Sports Editor \u2013 Florentino Torres High School (Ang Sulu)</li><li>Most Outstanding Campus Journalist \u2013 YMCA; First Runner-up \u2013 Sports Writing, National Secondary School Press Conference</li><li>Community Organizer \u2013 Riyadh, Saudi Arabia; Founding Chairman - Pinoy Badminton Club (PBC), Pinoy Basketball Club (PBBC), Pinoy Volleyball Club (PVC) of Saudi Arabia</li></ul>"},
+  "doeleth-gatdula": {name:"Doeleth L. Gatdula, M.D.", role:"Director", bio:"<ul><li>Production Supervisor \u2013 The Filipino Channel (TFC); Correspondent-North America - TFCN</li><li>Contributor \u2013 Philippine Post; Editor-in-Chief \u2013 Antonio Luna Elementary School (The Generals)</li><li>Community Organizer \u2013 Riyadh, Saudi Arabia; Co-Founder - PBC, PBBC, and PVC of Saudi Arabia</li></ul>"},
+  "benny-uy": {name:"Benny Uy", role:"Director", bio:""},
+  "isidric-panganiban": {name:"Isidric M. Panganiban", role:"Director", bio:"<p>Isidric M. Panganiban is a Filipino-American media professional, producer, and communications specialist with a passion for storytelling and community engagement. With years of experience in video production, event coverage, journalism, and public relations, he has dedicated his career to highlighting the achievements, culture, and voices of the Filipino-American community.</p><p>Through his work in multimedia production and live events, Isidric has interviewed notable personalities, covered major concerts and community celebrations, and helped promote nonprofit and civic organizations. His commitment to quality media and meaningful storytelling continues to inspire, inform, and connect audiences across generations.</p>"},
+  "mylene-capati": {name:"Mylene Capati", role:"Director", bio:"<p>Mylene Capati enjoys the simple things in life. She loves singing, listening to music, hiking, exploring the outdoors, and spending quality time with her family.</p><p>She earned a degree in Electronic Engineering and currently works for an aeronautics company, where she applies her technical expertise in the aerospace industry. Beyond her professional career, Mylene is a social media vlogger who enjoys creating engaging content and actively participates in her church\'s ministries and community activities.</p><p>Driven by her passion for creativity and entrepreneurship, she recently launched iMprints, a custom apparel and printing company specializing in personalized T-shirts, clothing, and promotional products. Through iMprints, Mylene combines quality craftsmanship with innovative design to help individuals, organizations, and businesses bring their ideas to life.</p>"},
+  "mel-velasco": {name:"Mel T. Velasco", role:"Director", bio:""},
+  "eddie-ferrer": {name:"Eddie C. Ferrer", role:"Director", bio:"<ul><li>Helped cover the historic 1970 Apostolic Visit of Pope John VI to the Philippines</li><li>Helped establish Northern Luzon\u2019s broadcast operations: DZWT-AM, DZWR-FM and Shortwave Service</li><li>Editor-in-Chief - St. Louis University Baguio City publication, White and Blue</li><li>Worked with several local Baguio stations between 1961 and 1964</li></ul>"},
+  "nimfa-rueda": {name:"Nimfa U. Rueda", role:"Vice President", bio:""},
+  "jannelle-so": {name:"Jannelle So", role:"Vice President", bio:""},
+  "manny-ilagan": {name:"Emmanuel “Manny” Ilagan", role:"Founding Chairman — In Memoriam", bio:"<ul><li>Member - International Practical Shooting Confederation (IPSC)</li><li>Member - Alpha Phi Omega International Collegiate Service Fraternity</li><li>Master Mason - Grand Lodge of Free and Accepted Mason of California</li><li>Contributor - Asian Journal</li><li>Member - Press Photographers Association of Los Angeles</li><li>Officer-in-Charge and Tourism Director of Tourism (an adjunct of the Philippine Consulate General of Los Angeles)</li><li>President - Philippine Association of Travel Agents in Los Angeles and suburbs</li></ul>"},
+};
+
+function initials(name) {
+  var parts = name.replace(/[,.].*$/, '').trim().split(/\s+/);
+  var first = parts[0] ? parts[0][0] : '';
+  var last = parts.length > 1 ? parts[parts.length-1][0] : '';
+  return (first + last).toUpperCase();
+}
+function openProfileModal(cardEl) {
+  var slug = cardEl.getAttribute('data-profile');
+  var data = PROFILE_BIOS[slug];
+  if (!data) return;
+  var imgEl = cardEl.querySelector('img');
+  var wrap = document.getElementById('profileModalPhotoWrap');
+  if (imgEl) {
+    wrap.className = 'profile-modal-photo';
+    wrap.innerHTML = '<img src="' + imgEl.src + '" alt="' + data.name + '">';
+  } else {
+    wrap.className = 'profile-modal-photo placeholder';
+    wrap.innerHTML = '<span>' + initials(data.name) + '</span>';
+  }
+  document.getElementById('profileModalRole').textContent = data.role;
+  document.getElementById('profileModalName').textContent = data.name;
+  var bioHtml = data.bio;
+  if (!bioHtml) {
+    var pEl = cardEl.querySelector('p');
+    var shortText = pEl ? pEl.childNodes[0].textContent.trim() : '';
+    bioHtml = shortText ? '<p>' + shortText + '</p>' : '';
+  }
+  document.getElementById('profileModalBio').innerHTML = bioHtml;
+  document.getElementById('profileModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeProfileModal() {
+  document.getElementById('profileModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeProfileModalOutside(e) {
+  if (e.target.id === 'profileModal') closeProfileModal();
+}
+document.addEventListener('keydown', function(e) {
+  if (document.getElementById('profileModal').classList.contains('open') && e.key === 'Escape') closeProfileModal();
+});
+</script>
+</body>
+</html>
